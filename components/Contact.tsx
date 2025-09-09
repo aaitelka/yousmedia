@@ -6,6 +6,7 @@ import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
 import { Send, CheckCircle, AlertCircle, MapPin, Phone, Mail } from 'lucide-react';
 import { useLanguage } from '@/lib/contexts/LanguageContext';
+import { ContactButton } from './button/ContactButton';
 
 export default function Contact() {
   const { t } = useLanguage();
@@ -36,7 +37,7 @@ export default function Contact() {
       try {
         // In a real application, you would send this data to your backend
         console.log('Form data to be sent to contact@yousmedia.ma:', formData);
-        
+
         setSubmitStatus('success');
         setFormData({
           name: '',
@@ -57,7 +58,7 @@ export default function Contact() {
   return (
     <section id="contact" className="py-20 relative">
       <div className="absolute inset-0 bg-gradient-to-br from-purple-900/20 via-blue-900/20 to-indigo-900/20"></div>
-      
+
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-12">
@@ -109,7 +110,7 @@ export default function Contact() {
                   className="px-6 py-4 text-lg rounded-2xl border-2 border-purple-400/30 bg-white/10 dark:bg-white/10 backdrop-blur-sm focus:border-purple-400 focus:ring-2 focus:ring-purple-400/20 transition-all duration-300"
                 />
               </div>
-              
+
               <div className="mb-6">
                 <Textarea
                   name="message"
@@ -123,7 +124,8 @@ export default function Contact() {
               </div>
 
               <div className="flex flex-col items-center gap-4">
-                <Button 
+                <ContactButton />
+                {/* <Button
                   type="submit"
                   size="lg"
                   disabled={isSubmitting}
@@ -140,7 +142,7 @@ export default function Contact() {
                       {t('contact', 'send')}
                     </div>
                   )}
-                </Button>
+                </Button> */}
 
                 {submitStatus === 'success' && (
                   <div className="flex items-center gap-2 text-green-500 animate-fade-in">
