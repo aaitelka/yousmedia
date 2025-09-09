@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from 'react';
-import { ArrowLeft, ExternalLink, Github, Calendar, Tag } from 'lucide-react';
+import { ArrowLeft, ExternalLink, Github, Calendar, Tag, Moon, Sun } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { useLanguage } from '@/lib/contexts/LanguageContext';
 import { useTheme } from '@/lib/contexts/ThemeContext';
@@ -113,8 +113,8 @@ export default function Portfolio() {
     { id: 'branding', label: t('portfolio', 'branding') }
   ];
 
-  const filteredProjects = selectedCategory === 'all' 
-    ? projects 
+  const filteredProjects = selectedCategory === 'all'
+    ? projects
     : projects.filter(project => project.category === selectedCategory);
 
   const goHome = () => {
@@ -136,9 +136,9 @@ export default function Portfolio() {
               >
                 <ArrowLeft className="h-4 w-4" />
               </Button>
-              <img 
-                src="/YousMedia-300x80.png" 
-                alt="YousMedia Logo" 
+              <img
+                src="/YousMedia-300x80.png"
+                alt="YousMedia Logo"
                 className="h-8 w-auto"
               />
             </div>
