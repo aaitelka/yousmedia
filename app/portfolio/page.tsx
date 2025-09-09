@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from 'react';
-import { ArrowLeft, ExternalLink, Github, Calendar, Tag, Moon, Sun } from 'lucide-react';
+import { ArrowLeft, ExternalLink, Github, Calendar, Tag } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { useLanguage } from '@/lib/contexts/LanguageContext';
 import { useTheme } from '@/lib/contexts/ThemeContext';
@@ -106,15 +106,15 @@ export default function Portfolio() {
   const [selectedCategory, setSelectedCategory] = useState<string>('all');
 
   const categories = [
-    { id: 'all', label: { fr: 'Tous', en: 'All' } },
-    { id: 'web', label: { fr: 'Web', en: 'Web' } },
-    { id: 'mobile', label: { fr: 'Mobile', en: 'Mobile' } },
-    { id: 'design', label: { fr: 'Design', en: 'Design' } },
-    { id: 'branding', label: { fr: 'Branding', en: 'Branding' } }
+    { id: 'all', label: t('portfolio', 'all') },
+    { id: 'web', label: t('portfolio', 'web') },
+    { id: 'mobile', label: t('portfolio', 'mobile') },
+    { id: 'design', label: t('portfolio', 'design') },
+    { id: 'branding', label: t('portfolio', 'branding') }
   ];
 
-  const filteredProjects = selectedCategory === 'all'
-    ? projects
+  const filteredProjects = selectedCategory === 'all' 
+    ? projects 
     : projects.filter(project => project.category === selectedCategory);
 
   const goHome = () => {
@@ -136,9 +136,11 @@ export default function Portfolio() {
               >
                 <ArrowLeft className="h-4 w-4" />
               </Button>
-              <h1 className="text-2xl font-bold bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent">
-                YousMedia
-              </h1>
+              <img 
+                src="/YousMedia-300x80.png" 
+                alt="YousMedia Logo" 
+                className="h-8 w-auto"
+              />
             </div>
 
             <div className="flex items-center space-x-4">
@@ -149,19 +151,24 @@ export default function Portfolio() {
                 className="h-9 w-9 relative"
               >
                 {language === 'fr' ? (
-                  <div className="w-6 h-4 bg-blue-600 relative overflow-hidden rounded-sm">
-                    <div className="w-2 h-full bg-white absolute left-0"></div>
-                    <div className="w-2 h-full bg-red-600 absolute right-0"></div>
+                  <div className="w-6 h-4 relative overflow-hidden rounded-sm shadow-md">
+                    <div className="w-full h-full bg-blue-600"></div>
+                    <div className="w-2/3 h-full bg-white absolute left-1/3 top-0"></div>
+                    <div className="w-1/3 h-full bg-red-600 absolute right-0 top-0"></div>
                   </div>
                 ) : (
-                  <div className="w-6 h-4 relative overflow-hidden rounded-sm">
-                    <div className="w-full h-full bg-blue-800"></div>
-                    <div className="absolute inset-0 flex items-center justify-center">
-                      <div className="w-3 h-0.5 bg-white transform rotate-45"></div>
-                      <div className="w-3 h-0.5 bg-white transform -rotate-45 absolute"></div>
+                  <div className="w-6 h-4 relative overflow-hidden rounded-sm shadow-md">
+                    <div className="w-full h-full bg-red-600"></div>
+                    <div className="w-full h-0.5 bg-white absolute top-0.5"></div>
+                    <div className="w-full h-0.5 bg-white absolute top-1"></div>
+                    <div className="w-full h-0.5 bg-white absolute top-1.5"></div>
+                    <div className="w-full h-0.5 bg-white absolute top-2"></div>
+                    <div className="w-full h-0.5 bg-white absolute top-2.5"></div>
+                    <div className="w-full h-0.5 bg-white absolute top-3"></div>
+                    <div className="w-full h-0.5 bg-white absolute top-3.5"></div>
+                    <div className="w-2.5 h-2 bg-blue-800 absolute top-0 left-0">
+                      <div className="w-0.5 h-0.5 bg-white absolute top-0.5 left-0.5"></div>
                     </div>
-                    <div className="w-full h-1 bg-red-600 absolute bottom-0"></div>
-                    <div className="w-full h-1 bg-white absolute bottom-1"></div>
                   </div>
                 )}
               </Button>
@@ -185,10 +192,10 @@ export default function Portfolio() {
           {/* Hero Section */}
           <div className="text-center mb-16">
             <h1 className="text-4xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-purple-600 to-blue-600 bg-clip-text text-transparent">
-              {t('portfolioTitle')}
+              {t('portfolio', 'title')}
             </h1>
             <p className="text-xl text-gray-600 dark:text-gray-400 max-w-3xl mx-auto leading-relaxed">
-              {t('portfolioSubtitle')}
+              {t('portfolio', 'subtitle')}
             </p>
           </div>
 
@@ -205,7 +212,7 @@ export default function Portfolio() {
                     : 'border-purple-400/30 text-purple-600 dark:text-purple-400 hover:bg-purple-600 hover:text-white'
                 }`}
               >
-                {category.label[language]}
+                {category.label}
               </Button>
             ))}
           </div>
@@ -284,7 +291,7 @@ export default function Portfolio() {
           {filteredProjects.length === 0 && (
             <div className="text-center py-12">
               <p className="text-xl text-gray-600 dark:text-gray-400">
-                {language === 'fr' ? 'Aucun projet trouvé dans cette catégorie.' : 'No projects found in this category.'}
+                {t('portfolio', 'noProjects')}
               </p>
             </div>
           )}

@@ -13,14 +13,14 @@ export default function About() {
         <div className="max-w-4xl mx-auto">
           <div className="text-center mb-12">
             <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-purple-600 to-blue-600 bg-clip-text text-transparent">
-              {t('aboutTitle')}
+              {t('about', 'title')}
             </h2>
           </div>
 
           <div className="bg-white/5 dark:bg-white/5 backdrop-blur-sm border border-white/20 rounded-3xl p-8 md:p-12">
             <div className="prose prose-lg md:prose-xl prose-purple dark:prose-invert max-w-none">
               <p className="text-gray-700 dark:text-gray-300 leading-relaxed text-center text-xl">
-                {t('aboutText')}
+                {t('about', 'text')}
               </p>
             </div>
 

@@ -9,18 +9,18 @@ export default function Features() {
   const features = [
     {
       icon: <Palette className="h-8 w-8" />,
-      title: t('creativeTools'),
-      description: t('creativeToolsDesc'),
+      title: t('features', 'creativeTools'),
+      description: t('features', 'creativeToolsDesc'),
     },
     {
       icon: <Users className="h-8 w-8" />,
-      title: t('collaboration'),
-      description: t('collaborationDesc'),
+      title: t('features', 'collaboration'),
+      description: t('features', 'collaborationDesc'),
     },
     {
       icon: <Cloud className="h-8 w-8" />,
-      title: t('cloudSync'),
-      description: t('cloudSyncDesc'),
+      title: t('features', 'cloudSync'),
+      description: t('features', 'cloudSyncDesc'),
     },
   ];
 
@@ -31,10 +31,10 @@ export default function Features() {
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-purple-600 to-blue-600 bg-clip-text text-transparent">
-            {t('featuresTitle')}
+            {t('features', 'title')}
           </h2>
           <p className="text-xl text-gray-600 dark:text-gray-400 max-w-3xl mx-auto leading-relaxed">
-            {t('featuresSubtitle')}
+            {t('features', 'subtitle')}
           </p>
         </div>
 
