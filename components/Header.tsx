@@ -5,6 +5,7 @@ import { Moon, Sun, Menu, X } from 'lucide-react';
 import { useTheme } from '@/lib/contexts/ThemeContext';
 import { useLanguage } from '@/lib/contexts/LanguageContext';
 import { Button } from '@/components/ui/button';
+import LanguageSelector from './LanguageSelector';
 
 export default function Header() {
   const { theme, toggleTheme } = useTheme();
@@ -30,34 +31,34 @@ export default function Header() {
         <div className="flex items-center justify-between h-16">
           <div className="flex items-center">
             <div className="flex items-center gap-3">
-              <img 
-                src="/YousMedia-300x80.png" 
-                alt="YousMedia Logo" 
+              <img
+                src="/YousMedia-300x80.png"
+                alt="YousMedia Logo"
                 className="h-8 w-auto animate-pulse"
               />
             </div>
           </div>
 
           <nav className="hidden md:flex items-center space-x-8">
-            <button 
+            <button
               onClick={() => scrollToSection('features')}
               className="text-gray-700 dark:text-gray-300 hover:text-purple-600 dark:hover:text-purple-400 transition-colors"
             >
               {t('header', 'features')}
             </button>
-            <button 
+            <button
               onClick={navigateToPortfolio}
               className="text-gray-700 dark:text-gray-300 hover:text-purple-600 dark:hover:text-purple-400 transition-colors"
             >
               {t('header', 'portfolio')}
             </button>
-            <button 
+            <button
               onClick={() => scrollToSection('about')}
               className="text-gray-700 dark:text-gray-300 hover:text-purple-600 dark:hover:text-purple-400 transition-colors"
             >
               {t('header', 'about')}
             </button>
-            <button 
+            <button
               onClick={() => scrollToSection('contact')}
               className="text-gray-700 dark:text-gray-300 hover:text-purple-600 dark:hover:text-purple-400 transition-colors"
             >
@@ -66,7 +67,9 @@ export default function Header() {
           </nav>
 
           <div className="flex items-center space-x-4">
-            <Button
+          <LanguageSelector onSelectLanguage={() => setIsMenuOpen(false)} />
+
+            {/* <Button
               variant="ghost"
               size="icon"
               onClick={() => setLanguage(language === 'fr' ? 'en' : 'fr')}
@@ -94,7 +97,7 @@ export default function Header() {
                 </div>
               )}
               <span className="sr-only">Toggle language</span>
-            </Button>
+            </Button> */}
 
             <Button
               variant="ghost"
@@ -122,25 +125,25 @@ export default function Header() {
 
         <div className={`md:hidden border-t border-white/20 overflow-hidden transition-all duration-300 ease-in-out ${isMenuOpen ? 'max-h-64 opacity-100' : 'max-h-0 opacity-0'}`}>
           <div className="py-4 space-y-4">
-            <button 
+            <button
               onClick={() => scrollToSection('features')}
               className="block text-gray-700 dark:text-gray-300 hover:text-purple-600 dark:hover:text-purple-400 transition-colors transform hover:translate-x-2 duration-200"
             >
               {t('header', 'features')}
             </button>
-            <button 
+            <button
               onClick={navigateToPortfolio}
               className="block text-gray-700 dark:text-gray-300 hover:text-purple-600 dark:hover:text-purple-400 transition-colors transform hover:translate-x-2 duration-200"
             >
               {t('header', 'portfolio')}
             </button>
-            <button 
+            <button
               onClick={() => scrollToSection('about')}
               className="block text-gray-700 dark:text-gray-300 hover:text-purple-600 dark:hover:text-purple-400 transition-colors transform hover:translate-x-2 duration-200"
             >
               {t('header', 'about')}
             </button>
-            <button 
+            <button
               onClick={() => scrollToSection('contact')}
               className="block text-gray-700 dark:text-gray-300 hover:text-purple-600 dark:hover:text-purple-400 transition-colors transform hover:translate-x-2 duration-200"
             >
