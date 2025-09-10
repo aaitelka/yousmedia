@@ -83,10 +83,10 @@ export default function Terms() {
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-4xl">
           {/* Hero Section */}
           <div className="text-center mb-12">
-            <div className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-br from-purple-500 to-blue-500 rounded-2xl mb-6">
+            <div className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-br from-purple-500 to-blue-700 rounded-2xl mb-6">
               <Scale className="w-8 h-8 text-white" />
             </div>
-            <h1 className="text-4xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-purple-600 to-blue-600 bg-clip-text text-transparent">
+            <h1 className="text-4xl md:text-5xl font-bold mb-4 bg-gradient-to-r bg-gradient-to-r from-primary-400 via-secondary-400 to-accent-400 bg-clip-text text-transparent">
               {language === 'fr' ? 'Conditions d\'Utilisation' : 'Terms of Service'}
             </h1>
             <p className="text-lg text-gray-600 dark:text-gray-400">

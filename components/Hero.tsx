@@ -40,12 +40,12 @@ export default function Hero() {
                   onInit={(typewriter) => {
                     typewriter
                       .typeString(
-                        `<span class='bg-gradient-to-r from-primary-400 via-secondary-400 to-[#ff9900] bg-clip-text text-transparent'>YousMedia</span>`
+                        `<span class='bg-gradient-to-r from-primary-400 via-secondary-400 to-accent-400 bg-clip-text text-transparent'>YousMedia</span>`
                       )
                       .pauseFor(1000)
                       .deleteAll()
                       .typeString(
-                        `${t('hero', 'title')} <span class='bg-gradient-to-r from-primary-400 via-secondary-400 to-[#ff9900] bg-clip-text text-transparent'>${
+                        `${t('hero', 'title')} <span class='bg-gradient-to-r from-primary-400 via-secondary-400 to-accent-400 bg-clip-text text-transparent'>${
                           t('hero', 'titleHighlight'
                         )}</span> ${t('hero', 'titleEnd')}`
                       )

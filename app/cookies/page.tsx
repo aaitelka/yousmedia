@@ -144,10 +144,10 @@ export default function Cookies() {
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-4xl">
           {/* Hero Section */}
           <div className="text-center mb-12">
-            <div className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-br from-purple-500 to-blue-500 rounded-2xl mb-6">
+            <div className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-br from-purple-500 to-blue-700 rounded-2xl mb-6">
               <Cookie className="w-8 h-8 text-white" />
             </div>
-            <h1 className="text-4xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-purple-600 to-blue-600 bg-clip-text text-transparent">
+            <h1 className="text-4xl md:text-5xl font-bold mb-4 bg-gradient-to-r bg-gradient-to-r from-primary-400 via-secondary-400 to-accent-400 bg-clip-text text-transparent">
               {language === 'fr' ? 'Paramètres des Cookies' : 'Cookie Settings'}
             </h1>
             <p className="text-lg text-gray-600 dark:text-gray-400">
@@ -193,7 +193,7 @@ export default function Cookies() {
               {/* Analytics Cookies */}
               <div className="flex items-start justify-between p-6 bg-gray-50/50 dark:bg-gray-800/50 rounded-2xl">
                 <div className="flex items-start gap-4 flex-1">
-                  <div className="w-10 h-10 bg-gradient-to-br from-blue-500 to-indigo-500 rounded-xl flex items-center justify-center flex-shrink-0">
+                  <div className="w-10 h-10 bg-gradient-to-br from-purple-500 to-indigo-500 rounded-xl flex items-center justify-center flex-shrink-0">
                     <BarChart className="w-5 h-5 text-white" />
                   </div>
                   <div className="flex-1">
@@ -289,7 +289,7 @@ export default function Cookies() {
             <Button
               onClick={saveSettings}
               size="lg"
-              className="px-8 py-4 text-lg bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white border-0 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105"
+              className="px-8 py-4 text-lg bg-gradient-to-r bg-gradient-to-r from-primary-400 via-secondary-400 to-accent-400 hover:from-purple-700 hover:to-blue-700 text-white border-0 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105"
             >
               {language === 'fr' ? 'Sauvegarder les Paramètres' : 'Save Settings'}
             </Button>
@@ -306,7 +306,7 @@ export default function Cookies() {
 
           {/* Additional Information */}
           <div className="mt-12 bg-white/5 dark:bg-white/5 backdrop-blur-sm border border-white/20 rounded-3xl p-8">
-            <h2 className="text-2xl font-bold mb-4 bg-gradient-to-r from-purple-600 to-blue-600 bg-clip-text text-transparent">
+            <h2 className="text-2xl font-bold mb-4 bg-gradient-to-r bg-gradient-to-r from-primary-400 via-secondary-400 to-accent-400 bg-clip-text text-transparent">
               {language === 'fr' ? 'Informations Supplémentaires' : 'Additional Information'}
             </h2>
             <div className="prose prose-lg max-w-none text-gray-700 dark:text-gray-300">
