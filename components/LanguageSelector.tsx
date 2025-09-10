@@ -1,5 +1,5 @@
 import { useState, useRef, useEffect } from "react";
-import { Globe, ChevronDown } from "lucide-react";
+import { ChevronDown } from "lucide-react";
 import { useLanguage } from "../lib/contexts/LanguageContext";
 
 const LanguageSelector = () => {
@@ -16,10 +16,9 @@ const LanguageSelector = () => {
 
   const handleLanguageChange = (code: "en" | "fr") => {
     setLanguage(code);
-    setIsOpen(false); // close dropdown
+    setIsOpen(false);
   };
 
-  // Close dropdown when clicking outside
   useEffect(() => {
     const handleClickOutside = (event: MouseEvent) => {
       if (
@@ -38,13 +37,15 @@ const LanguageSelector = () => {
       {/* Main Button */}
       <button
         onClick={() => setIsOpen(!isOpen)}
-        className="flex items-center gap-2 px-3 h-8 bg-gray-100 dark:bg-gray-800 rounded-full shadow-sm hover:shadow-md transition-all duration-200 focus:outline-none"
+        className="flex items-center gap-2 px-3 h-8 rounded-full transition-all duration-200 focus:outline-none
+                   bg-white/10 dark:bg-black/20 backdrop-blur-md hover:bg-white/20 dark:hover:bg-black/30
+                   text-white dark:text-gray-200"
       >
-        <span className="font-medium text-sm text-gray-700 dark:text-gray-300">
+        <span className="font-medium text-sm">
           {currentLanguage?.flag} {currentLanguage?.code.toUpperCase()}
         </span>
         <ChevronDown
-          className={`w-3 h-3 text-gray-500 dark:text-gray-400 transition-transform duration-200 ${
+          className={`w-3 h-3 text-white dark:text-gray-300 transition-transform duration-200 ${
             isOpen ? "rotate-180" : ""
           }`}
         />
@@ -52,16 +53,20 @@ const LanguageSelector = () => {
 
       {/* Dropdown */}
       {isOpen && (
-        <div className="absolute top-full mt-2 right-0 w-44 bg-white dark:bg-gray-800 rounded-xl shadow-lg border border-gray-200 dark:border-gray-700 py-1 z-50 overflow-hidden transition-all duration-200">
+        <div
+          className="absolute top-full mt-2 right-0 w-44 rounded-xl shadow-lg border border-white/20 dark:border-black/30
+                     bg-white/10 dark:bg-black/20 backdrop-blur-md py-1 z-50 overflow-hidden transition-all duration-200"
+        >
           {languages.map((lang) => (
             <button
               key={lang.code}
               onClick={() => handleLanguageChange(lang.code as "en" | "fr")}
-              className={`w-full flex items-center gap-2 px-3 py-2 text-left text-sm transition-colors duration-200 ${
-                language === lang.code
-                  ? "bg-blue-50 dark:bg-blue-900/20 text-blue-600 dark:text-blue-400 font-semibold"
-                  : "text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700"
-              }`}
+              className={`w-full flex items-center gap-2 px-3 py-2 text-left text-sm transition-colors duration-200
+                ${
+                  language === lang.code
+                    ? "text-purple-400 font-semibold" // selected stays purple
+                    : "text-white hover:text-purple-400" // unselected white, turns purple on hover
+                }`}
             >
               <span className="text-lg">{lang.flag}</span>
               <span>{lang.name}</span>

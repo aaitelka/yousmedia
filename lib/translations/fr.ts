@@ -57,7 +57,7 @@ export const fr = {
     noProjects: "Aucun projet trouvé dans cette catégorie."
   },
   footer: {
-    rights: "Tous droits réservés",
+    rights: "© 2025 YousMedia. Tous droits réservés.",
     followUs: "Suivez-nous"
   }
 };

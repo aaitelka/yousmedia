@@ -5,6 +5,7 @@ import { ArrowLeft, ExternalLink, Github, Calendar, Tag, Moon, Sun } from 'lucid
 import { Button } from '@/components/ui/button';
 import { useLanguage } from '@/lib/contexts/LanguageContext';
 import { useTheme } from '@/lib/contexts/ThemeContext';
+import LanguageSelector from '@/components/LanguageSelector';
 
 interface Project {
   id: number;
@@ -121,6 +122,10 @@ export default function Portfolio() {
     window.location.href = '/';
   };
 
+  function setIsMenuOpen(arg0: boolean) {
+    throw new Error('Function not implemented.');
+  }
+
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-50 via-white to-gray-100 dark:from-gray-950 dark:via-black dark:to-gray-900">
       {/* Header */}
@@ -144,34 +149,7 @@ export default function Portfolio() {
             </div>
 
             <div className="flex items-center space-x-4">
-              <Button
-                variant="ghost"
-                size="icon"
-                onClick={() => setLanguage(language === 'fr' ? 'en' : 'fr')}
-                className="h-9 w-9 relative"
-              >
-                {language === 'fr' ? (
-                  <div className="w-6 h-4 relative overflow-hidden rounded-sm shadow-md">
-                    <div className="w-full h-full bg-blue-600"></div>
-                    <div className="w-2/3 h-full bg-white absolute left-1/3 top-0"></div>
-                    <div className="w-1/3 h-full bg-red-600 absolute right-0 top-0"></div>
-                  </div>
-                ) : (
-                  <div className="w-6 h-4 relative overflow-hidden rounded-sm shadow-md">
-                    <div className="w-full h-full bg-red-600"></div>
-                    <div className="w-full h-0.5 bg-white absolute top-0.5"></div>
-                    <div className="w-full h-0.5 bg-white absolute top-1"></div>
-                    <div className="w-full h-0.5 bg-white absolute top-1.5"></div>
-                    <div className="w-full h-0.5 bg-white absolute top-2"></div>
-                    <div className="w-full h-0.5 bg-white absolute top-2.5"></div>
-                    <div className="w-full h-0.5 bg-white absolute top-3"></div>
-                    <div className="w-full h-0.5 bg-white absolute top-3.5"></div>
-                    <div className="w-2.5 h-2 bg-blue-800 absolute top-0 left-0">
-                      <div className="w-0.5 h-0.5 bg-white absolute top-0.5 left-0.5"></div>
-                    </div>
-                  </div>
-                )}
-              </Button>
+            <LanguageSelector onSelectLanguage={() => setIsMenuOpen(false)} />
 
               <Button
                 variant="ghost"

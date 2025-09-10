@@ -19,9 +19,9 @@ export default function Footer() {
           </div>
 
           <div className="flex flex-col items-center gap-4">
-            <div className="flex items-center gap-2 text-gray-600 dark:text-gray-400">
+            {/* <div className="flex items-center gap-2 text-gray-600 dark:text-gray-400">
               <span>{t('footer', 'followUs')}</span>
-            </div>
+            </div> */}
             <div className="flex items-center gap-4">
               <a
                 href="https://facebook.com/yousmedia"
@@ -50,10 +50,23 @@ export default function Footer() {
             </div>
           </div>
 
-          <div className="text-center md:text-right">
-            <p className="text-gray-600 dark:text-gray-400 text-sm">
-              © 2025 YousMedia. {t('footer', 'rights')}.
-            </p>
+        </div>
+          <div className="mt-4 border-t border-gray-800 dark:border-gray-700 py-4">
+          <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
+            <div className="text-gray-400 text-sm">
+              {t('footer', 'rights')}
+            </div>
+            <div className="flex items-center space-x-6 text-sm text-gray-400">
+              <a href="/privacy" className="hover:text-primary-400 transition-colors duration-200">
+                Privacy Policy
+              </a>
+              <a href="/terms" className="hover:text-primary-400 transition-colors duration-200">
+                Terms of Service
+              </a>
+              <a href="/cookies" className="hover:text-primary-400 transition-colors duration-200">
+                Cookie Settings
+              </a>
+            </div>
           </div>
         </div>
       </div>
