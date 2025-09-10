@@ -12,7 +12,7 @@ export default function About() {
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="max-w-4xl mx-auto">
           <div className="text-center mb-12">
-            <h2 className="inline-block text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-primary-400 to-secondary-400 bg-clip-text text-transparent">
+            <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r bg-gradient-to-r from-primary-400 via-secondary-400 to-[#ff9901] bg-clip-text text-transparent">
               {t('about', 'title')}
             </h2>
           </div>

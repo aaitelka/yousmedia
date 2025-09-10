@@ -169,7 +169,7 @@ export default function Portfolio() {
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           {/* Hero Section */}
           <div className="text-center mb-16">
-            <h1 className="text-4xl md:text-6xl font-bold mb-6 bg-gradient-to-r bg-gradient-to-r from-primary-400 via-secondary-400 to-accent-400 bg-clip-text text-transparent">
+            <h1 className="text-4xl md:text-6xl font-bold mb-6 bg-gradient-to-r bg-gradient-to-r from-primary-400 via-secondary-400 to-[#ff9901] bg-clip-text text-transparent">
               {t('portfolio', 'title')}
             </h1>
             <p className="text-xl text-gray-600 dark:text-gray-400 max-w-3xl mx-auto leading-relaxed">
@@ -186,7 +186,7 @@ export default function Portfolio() {
                 onClick={() => setSelectedCategory(category.id)}
                 className={`px-6 py-2 rounded-full transition-all duration-300 ${
                   selectedCategory === category.id
-                    ? 'bg-gradient-to-r bg-gradient-to-r from-primary-400 via-secondary-400 to-accent-400 text-white'
+                    ? 'bg-gradient-to-r bg-gradient-to-r from-primary-400 via-secondary-400 to-[#ff9901] text-white'
                     : 'border-purple-400/30 text-purple-600 dark:text-purple-400 hover:bg-purple-600 hover:text-white'
                 }`}
               >
