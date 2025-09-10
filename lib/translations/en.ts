@@ -40,10 +40,11 @@ export const en = {
     messageError: "Error sending message",
     getInTouch: "Get in Touch",
     address: "Address",
-    addressText: "123 Mohammed V Avenue, Casablanca, Morocco",
+    addressText: "Bloc 25 Rue 4 N° 26 Hay Mohammadi Agadir, Morocco",
     phoneNumbers: "Phone Numbers",
-    phone1: "+212 522 123 456",
-    phone2: "+212 661 234 567"
+    phone1: "+212 628 199 399",
+    phone2: "+212 661 891 259",
+    phone3: "+33 7 44 70 26 66"
   },
   portfolio: {
     title: "Our Work",

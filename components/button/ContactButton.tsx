@@ -1,11 +1,14 @@
 import { useEffect, useRef } from "react";
+import { Send } from "lucide-react";
 import "./ContactButton.css";
 
 type ContactButtonProps = {
-  t: (key: string) => string;
+  label: string;
+  sendingLabel: string;
+  isSubmitting: boolean;
 };
 
-export const ContactButton = () => {
+export const ContactButton = ({ label, sendingLabel, isSubmitting }: ContactButtonProps) => {
   const boxRef = useRef<HTMLSpanElement | null>(null);
   const fillRef = useRef<HTMLDivElement | null>(null);
 
@@ -17,10 +20,8 @@ export const ContactButton = () => {
     const observer = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting) {
-          // Trigger border animation
           boxElement.classList.add("animate-on-scroll");
 
-          // Trigger fill fade-in
           fillElement.style.transition = "opacity 6s ease";
           fillElement.style.opacity = "1";
 
@@ -38,7 +39,9 @@ export const ContactButton = () => {
   return (
     <button
       type="submit"
-      className="relative w-full py-3 px-6 text-white rounded-full font-semibold transition-all duration-200 transform hover:scale-105 shadow-lg overflow-hidden"
+      disabled={isSubmitting}
+      className={`relative w-full py-3 px-6 text-white rounded-full font-semibold transition-all duration-200 transform hover:scale-105 shadow-lg overflow-hidden
+        ${isSubmitting ? "opacity-50 cursor-not-allowed hover:scale-100" : ""}`}
     >
       {/* Border animation */}
       <span
@@ -52,12 +55,24 @@ export const ContactButton = () => {
         className="absolute inset-0 rounded-full pointer-events-none"
         style={{
           background: "linear-gradient(90deg, #00cfff, #ff2d55)",
-          opacity: 0, // start hidden
+          opacity: 0,
         }}
       ></div>
 
       {/* Button content */}
-      <span className="relative z-10">{"submit"}</span>
+      <span className="relative z-10 flex items-center justify-center gap-2">
+        {isSubmitting ? (
+          <>
+            <div className="w-4 h-4 border-2 border-white/30 border-t-white rounded-full animate-spin"></div>
+            {sendingLabel}
+          </>
+        ) : (
+          <>
+            <Send className="w-4 h-4" />
+            {label}
+          </>
+        )}
+      </span>
     </button>
   );
 };
