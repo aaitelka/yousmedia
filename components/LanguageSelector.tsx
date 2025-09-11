@@ -45,7 +45,7 @@ const LanguageSelector = () => {
           {currentLanguage?.flag} {currentLanguage?.code.toUpperCase()}
         </span>
         <ChevronDown
-          className={`w-3 h-3 text-white dark:text-gray-300 transition-transform duration-200 ${
+          className={`w-3 h-3 text-white dark:text-gray-300 transition-transform duration-300 ${
             isOpen ? "rotate-180" : ""
           }`}
         />
@@ -55,13 +55,13 @@ const LanguageSelector = () => {
       {isOpen && (
         <div
           className="absolute top-full mt-2 right-0 w-44 rounded-xl shadow-lg border border-white/20 dark:border-black/30
-                     bg-white/10 dark:bg-black/20 backdrop-blur-md py-1 z-50 overflow-hidden transition-all duration-200"
+                     bg-white/80 dark:bg-black/80 backdrop-blur-md py-1 z-50 overflow-hidden transition-all duration-300"
         >
           {languages.map((lang) => (
             <button
               key={lang.code}
               onClick={() => handleLanguageChange(lang.code as "en" | "fr")}
-              className={`w-full flex items-center gap-2 px-3 py-2 text-left text-sm transition-colors duration-200
+              className={`w-full flex items-center gap-2 px-3 py-2 text-left text-sm transition-colors duration-300
                 ${
                   language === lang.code
                     ? "text-purple-400 font-semibold" // selected stays purple

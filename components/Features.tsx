@@ -22,6 +22,21 @@ export default function Features() {
       title: t('features', 'cloudSync'),
       description: t('features', 'cloudSyncDesc'),
     },
+    {
+      icon: <Cloud className="h-8 w-8" />,
+      title: t('features', 'cloudSync'),
+      description: t('features', 'cloudSyncDesc'),
+    },
+    {
+      icon: <Cloud className="h-8 w-8" />,
+      title: t('features', 'cloudSync'),
+      description: t('features', 'cloudSyncDesc'),
+    },
+    {
+      icon: <Cloud className="h-8 w-8" />,
+      title: t('features', 'cloudSync'),
+      description: t('features', 'cloudSyncDesc'),
+    },
   ];
 
   return (
