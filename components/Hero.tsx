@@ -21,7 +21,7 @@ export default function Hero() {
       {/* Orange/Yellow blob */}
       <div className="absolute top-3/4 right-1/4 w-72 h-72 bg-gradient-to-tr from-[#FF9900] to-[#FFB347] rounded-full mix-blend-multiply filter blur-3xl animate-pulse delay-1000"></div>
 
-      {/* Pink/Red blob */}
+      {/* primary/Red blob */}
       <div className="absolute bottom-1/4 left-1/3 w-72 h-72 bg-gradient-to-tr from-[#FF2D55] to-[#FF5F7E] rounded-full mix-blend-multiply filter blur-3xl animate-pulse delay-2000"></div>
       </div>
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">

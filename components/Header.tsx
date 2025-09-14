@@ -35,11 +35,11 @@ export default function Header() {
   };
 
   return (
-    <header
+      <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         isScrolled
-          ? "backdrop-blur-md bg-white/10 dark:bg-black/20"
-          : "bg-transparent"
+          ? "backdrop-blur-3xl bg-white/10 dark:bg-black/20 text-black dark:text-white"
+          : "bg-transparent text-white dark:text-white"
       }`}
     >
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
@@ -57,25 +57,25 @@ export default function Header() {
           <nav className="hidden md:flex items-center space-x-8">
             <button
               onClick={() => scrollToSection("features")}
-              className="text-white dark:text-gray-300 hover:text-purple-600 dark:hover:text-purple-400 transition-colors"
+              className="text-gray-100 dark:text-gray-300 hover:text-primary-600 dark:hover:text-primary-400 transition-colors"
             >
               {t("header", "features")}
             </button>
             <button
               onClick={() => scrollToSection("about")}
-              className="text-white dark:text-gray-300 hover:text-purple-600 dark:hover:text-purple-400 transition-colors"
+              className="text-gray-100 dark:text-gray-300 hover:text-primary-600 dark:hover:text-primary-400 transition-colors"
             >
               {t("header", "about")}
             </button>
             <button
               onClick={() => scrollToSection("contact")}
-              className="text-white dark:text-gray-300 hover:text-purple-600 dark:hover:text-purple-400 transition-colors"
+              className="text-gray-100 dark:text-gray-300 hover:text-primary-600 dark:hover:text-primary-400 transition-colors"
             >
               {t("header", "contact")}
             </button>
             <button
               onClick={navigateToPortfolio}
-              className="text-white dark:text-gray-300 hover:text-purple-600 dark:hover:text-purple-400 transition-colors"
+              className="text-gray-100 dark:text-gray-300 hover:text-primary-600 dark:hover:text-primary-400 transition-colors"
             >
               {t("header", "portfolio")}
             </button>
@@ -84,7 +84,7 @@ export default function Header() {
           <div className="flex items-center space-x-4">
             <LanguageSelector onSelectLanguage={() => setIsMenuOpen(false)} />
 
-            <Button
+            {/* <Button
               variant="ghost"
               size="icon"
               onClick={toggleTheme}
@@ -96,7 +96,7 @@ export default function Header() {
                 <Sun className="h-4 w-4 text-[#FFCD59]" />
               )}
               <span className="sr-only">Toggle theme</span>
-            </Button>
+            </Button> */}
 
             <Button
               variant="ghost"
@@ -132,25 +132,25 @@ export default function Header() {
           <div className="py-4 space-y-4">
             <button
               onClick={() => scrollToSection("features")}
-              className="block text-white dark:text-gray-300 hover:text-purple-600 dark:hover:text-purple-400 transition-colors transform hover:translate-x-2 duration-200"
+              className="block text-white dark:text-gray-300 hover:text-primary-600 dark:hover:text-primary-400 transition-colors transform hover:translate-x-2 duration-200"
             >
               {t("header", "features")}
             </button>
             <button
               onClick={() => scrollToSection("about")}
-              className="block text-white dark:text-gray-300 hover:text-purple-600 dark:hover:text-purple-400 transition-colors transform hover:translate-x-2 duration-200"
+              className="block text-white dark:text-gray-300 hover:text-primary-600 dark:hover:text-primary-400 transition-colors transform hover:translate-x-2 duration-200"
             >
               {t("header", "about")}
             </button>
             <button
               onClick={() => scrollToSection("contact")}
-              className="block text-white dark:text-gray-300 hover:text-purple-600 dark:hover:text-purple-400 transition-colors transform hover:translate-x-2 duration-200"
+              className="block text-white dark:text-gray-300 hover:text-primary-600 dark:hover:text-primary-400 transition-colors transform hover:translate-x-2 duration-200"
             >
               {t("header", "contact")}
             </button>
             <button
               onClick={navigateToPortfolio}
-              className="block text-white dark:text-gray-300 hover:text-purple-600 dark:hover:text-purple-400 transition-colors transform hover:translate-x-2 duration-200"
+              className="block text-white dark:text-gray-300 hover:text-primary-600 dark:hover:text-primary-400 transition-colors transform hover:translate-x-2 duration-200"
             >
               {t("header", "portfolio")}
             </button>

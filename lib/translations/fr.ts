@@ -59,5 +59,12 @@ export const fr = {
   footer: {
     rights: "© 2025 YousMedia. Tous droits réservés.",
     followUs: "Suivez-nous"
-  }
+  },
+  partners: {
+    title: "Nos Partenaires",
+    subtitle: "Nous collaborons avec les meilleures entreprises du monde pour offrir des solutions exceptionnelles à nos clients.",
+    trustedPartners: "Partenaires de confiance",
+    successfulProjects: "Projets réussis",
+    clientSatisfaction: "Satisfaction client"
+  },
 };

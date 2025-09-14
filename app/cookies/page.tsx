@@ -6,6 +6,7 @@ import { Button } from '@/components/ui/button';
 import { Switch } from '@/components/ui/switch';
 import { useLanguage } from '@/lib/contexts/LanguageContext';
 import { useTheme } from '@/lib/contexts/ThemeContext';
+import Footer from '@/components/Footer';
 
 export default function Cookies() {
   const { t, language, setLanguage } = useLanguage();
@@ -96,45 +97,7 @@ export default function Cookies() {
               />
             </div>
 
-            <div className="flex items-center space-x-4">
-              <Button
-                variant="ghost"
-                size="icon"
-                onClick={() => setLanguage(language === 'fr' ? 'en' : 'fr')}
-                className="h-9 w-9 relative"
-              >
-                {language === 'fr' ? (
-                  <div className="w-6 h-4 relative overflow-hidden rounded-sm shadow-md">
-                    <div className="w-full h-full bg-blue-600"></div>
-                    <div className="w-2/3 h-full bg-white absolute left-1/3 top-0"></div>
-                    <div className="w-1/3 h-full bg-red-600 absolute right-0 top-0"></div>
-                  </div>
-                ) : (
-                  <div className="w-6 h-4 relative overflow-hidden rounded-sm shadow-md">
-                    <div className="w-full h-full bg-red-600"></div>
-                    <div className="w-full h-0.5 bg-white absolute top-0.5"></div>
-                    <div className="w-full h-0.5 bg-white absolute top-1"></div>
-                    <div className="w-full h-0.5 bg-white absolute top-1.5"></div>
-                    <div className="w-full h-0.5 bg-white absolute top-2"></div>
-                    <div className="w-full h-0.5 bg-white absolute top-2.5"></div>
-                    <div className="w-full h-0.5 bg-white absolute top-3"></div>
-                    <div className="w-full h-0.5 bg-white absolute top-3.5"></div>
-                    <div className="w-2.5 h-2 bg-blue-800 absolute top-0 left-0">
-                      <div className="w-0.5 h-0.5 bg-white absolute top-0.5 left-0.5"></div>
-                    </div>
-                  </div>
-                )}
-              </Button>
 
-              <Button
-                variant="ghost"
-                size="icon"
-                onClick={toggleTheme}
-                className="h-9 w-9"
-              >
-                {theme === 'light' ? <Moon className="h-4 w-4" /> : <Sun className="h-4 w-4" />}
-              </Button>
-            </div>
           </div>
         </div>
       </header>
@@ -144,10 +107,10 @@ export default function Cookies() {
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-4xl">
           {/* Hero Section */}
           <div className="text-center mb-12">
-            <div className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-br from-purple-500 to-blue-700 rounded-2xl mb-6">
+            <div className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-br from-primary-300 to-primary-600 rounded-2xl mb-6">
               <Cookie className="w-8 h-8 text-white" />
             </div>
-            <h1 className="text-4xl md:text-5xl font-bold mb-4 bg-gradient-to-r bg-gradient-to-r from-primary-400 via-secondary-400 to-[#ff9901] bg-clip-text text-transparent">
+            <h1 className="text-4xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-primary-300 to-primary-600 bg-clip-text text-transparent">
               {language === 'fr' ? 'Paramètres des Cookies' : 'Cookie Settings'}
             </h1>
             <p className="text-lg text-gray-600 dark:text-gray-400">
@@ -193,7 +156,7 @@ export default function Cookies() {
               {/* Analytics Cookies */}
               <div className="flex items-start justify-between p-6 bg-gray-50/50 dark:bg-gray-800/50 rounded-2xl">
                 <div className="flex items-start gap-4 flex-1">
-                  <div className="w-10 h-10 bg-gradient-to-br from-purple-500 to-indigo-500 rounded-xl flex items-center justify-center flex-shrink-0">
+                  <div className="w-10 h-10 bg-gradient-to-br from-primary-500 to-indigo-500 rounded-xl flex items-center justify-center flex-shrink-0">
                     <BarChart className="w-5 h-5 text-white" />
                   </div>
                   <div className="flex-1">
@@ -221,7 +184,7 @@ export default function Cookies() {
               {/* Marketing Cookies */}
               <div className="flex items-start justify-between p-6 bg-gray-50/50 dark:bg-gray-800/50 rounded-2xl">
                 <div className="flex items-start gap-4 flex-1">
-                  <div className="w-10 h-10 bg-gradient-to-br from-pink-500 to-rose-500 rounded-xl flex items-center justify-center flex-shrink-0">
+                  <div className="w-10 h-10 bg-gradient-to-br from-primary-500 to-rose-500 rounded-xl flex items-center justify-center flex-shrink-0">
                     <Target className="w-5 h-5 text-white" />
                   </div>
                   <div className="flex-1">
@@ -249,7 +212,7 @@ export default function Cookies() {
               {/* Preferences Cookies */}
               <div className="flex items-start justify-between p-6 bg-gray-50/50 dark:bg-gray-800/50 rounded-2xl">
                 <div className="flex items-start gap-4 flex-1">
-                  <div className="w-10 h-10 bg-gradient-to-br from-purple-500 to-violet-500 rounded-xl flex items-center justify-center flex-shrink-0">
+                  <div className="w-10 h-10 bg-gradient-to-br from-primary-500 to-violet-500 rounded-xl flex items-center justify-center flex-shrink-0">
                     <Settings className="w-5 h-5 text-white" />
                   </div>
                   <div className="flex-1">
@@ -289,7 +252,7 @@ export default function Cookies() {
             <Button
               onClick={saveSettings}
               size="lg"
-              className="px-8 py-4 text-lg bg-gradient-to-r bg-gradient-to-r from-primary-400 via-secondary-400 to-[#ff9901] hover:from-purple-700 hover:to-blue-700 text-white border-0 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105"
+              className="px-8 py-4 text-lg bg-gradient-to-r from-primary-300 to-primary-600 hover:from-primary-700 hover:to-blue-700 text-white border-0 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105"
             >
               {language === 'fr' ? 'Sauvegarder les Paramètres' : 'Save Settings'}
             </Button>
@@ -306,7 +269,7 @@ export default function Cookies() {
 
           {/* Additional Information */}
           <div className="mt-12 bg-white/5 dark:bg-white/5 backdrop-blur-sm border border-white/20 rounded-3xl p-8">
-            <h2 className="text-2xl font-bold mb-4 bg-gradient-to-r bg-gradient-to-r from-primary-400 via-secondary-400 to-[#ff9901] bg-clip-text text-transparent">
+            <h2 className="text-2xl font-bold mb-4 bg-gradient-to-r from-primary-300 to-primary-600 bg-clip-text text-transparent">
               {language === 'fr' ? 'Informations Supplémentaires' : 'Additional Information'}
             </h2>
             <div className="prose prose-lg max-w-none text-gray-700 dark:text-gray-300">
@@ -321,7 +284,7 @@ export default function Cookies() {
                   ? 'Pour plus d\'informations sur notre utilisation des cookies et la protection de vos données, consultez notre '
                   : 'For more information about our use of cookies and data protection, see our '
                 }
-                <a href="/privacy" className="text-purple-600 hover:text-purple-700 underline">
+                <a href="/privacy" className="text-primary-600 hover:text-primary-700 underline">
                   {language === 'fr' ? 'Politique de Confidentialité' : 'Privacy Policy'}
                 </a>.
               </p>
@@ -329,6 +292,7 @@ export default function Cookies() {
           </div>
         </div>
       </main>
+      <Footer />
     </div>
   );
 }

@@ -6,6 +6,7 @@ import { Button } from '@/components/ui/button';
 import { useLanguage } from '@/lib/contexts/LanguageContext';
 import { useTheme } from '@/lib/contexts/ThemeContext';
 import LanguageSelector from '@/components/LanguageSelector';
+import Footer from '@/components/Footer';
 
 interface Project {
   id: number;
@@ -169,7 +170,7 @@ export default function Portfolio() {
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           {/* Hero Section */}
           <div className="text-center mb-16">
-            <h1 className="text-4xl md:text-6xl font-bold mb-6 bg-gradient-to-r bg-gradient-to-r from-primary-400 via-secondary-400 to-[#ff9901] bg-clip-text text-transparent">
+            <h1 className="text-4xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-primary-300 to-primary-600 bg-clip-text text-transparent">
               {t('portfolio', 'title')}
             </h1>
             <p className="text-xl text-gray-600 dark:text-gray-400 max-w-3xl mx-auto leading-relaxed">
@@ -186,8 +187,8 @@ export default function Portfolio() {
                 onClick={() => setSelectedCategory(category.id)}
                 className={`px-6 py-2 rounded-full transition-all duration-300 ${
                   selectedCategory === category.id
-                    ? 'bg-gradient-to-r bg-gradient-to-r from-primary-400 via-secondary-400 to-[#ff9901] text-white'
-                    : 'border-purple-400/30 text-purple-600 dark:text-purple-400 hover:bg-purple-600 hover:text-white'
+                    ? 'bg-gradient-to-r from-primary-300 to-primary-600 text-white'
+                    : 'border-primary-400/30 text-primary-600 dark:text-primary-400 hover:bg-primary-600 hover:text-white'
                 }`}
               >
                 {category.label}
@@ -200,7 +201,7 @@ export default function Portfolio() {
             {filteredProjects.map((project, index) => (
               <div
                 key={project.id}
-                className="group bg-white/5 dark:bg-white/5 backdrop-blur-sm border border-white/20 rounded-2xl overflow-hidden hover:border-purple-400/50 transition-all duration-300 hover:transform hover:scale-105 hover:shadow-xl hover:shadow-purple-500/20"
+                className="group bg-white/5 dark:bg-white/5 backdrop-blur-sm border border-white/20 rounded-2xl overflow-hidden hover:border-primary-400/50 transition-all duration-300 hover:transform hover:scale-105 hover:shadow-xl hover:shadow-primary-500/20"
                 style={{
                   animationDelay: `${index * 100}ms`
                 }}
@@ -238,7 +239,7 @@ export default function Portfolio() {
 
                 <div className="p-6">
                   <div className="flex items-center gap-2 mb-3">
-                    <Calendar className="w-4 h-4 text-purple-400" />
+                    <Calendar className="w-4 h-4 text-primary-400" />
                     <span className="text-sm text-gray-500 dark:text-gray-400">{project.date}</span>
                   </div>
 
@@ -254,7 +255,7 @@ export default function Portfolio() {
                     {project.tags.map((tag, tagIndex) => (
                       <span
                         key={tagIndex}
-                        className="inline-flex items-center gap-1 px-3 py-1 bg-purple-100 dark:bg-purple-900/30 text-purple-600 dark:text-purple-400 rounded-full text-sm"
+                        className="inline-flex items-center gap-1 px-3 py-1 bg-primary-100 dark:bg-primary-900/30 text-primary-600 dark:text-primary-400 rounded-full text-sm"
                       >
                         <Tag className="w-3 h-3" />
                         {tag}
@@ -275,6 +276,7 @@ export default function Portfolio() {
           )}
         </div>
       </main>
+      <Footer />
     </div>
   );
 }

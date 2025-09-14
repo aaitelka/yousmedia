@@ -35,7 +35,7 @@ export default function Footer() {
                 href="https://instagram.com/yousmedia"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-10 h-10 bg-gradient-to-br from-pink-500 to-purple-600 rounded-full flex items-center justify-center text-white hover:scale-110 hover:shadow-lg hover:shadow-pink-500/25 transition-all duration-300"
+                className="w-10 h-10 bg-gradient-to-br from-blue-500 to-blue-600 rounded-full flex items-center justify-center text-white hover:scale-110 hover:shadow-lg hover:shadow-blue-500/25 transition-all duration-300"
               >
                 <Instagram className="w-5 h-5" />
               </a>
@@ -57,13 +57,13 @@ export default function Footer() {
               {t('footer', 'rights')}
             </div>
             <div className="flex items-center space-x-6 text-sm text-gray-400">
-              <a href="/privacy" className="hover:text-primary-400 transition-colors duration-200">
+              <a href="/privacy" className="hover:text-blue-400 transition-colors duration-200">
                 Privacy Policy
               </a>
-              <a href="/terms" className="hover:text-primary-400 transition-colors duration-200">
+              <a href="/terms" className="hover:text-blue-400 transition-colors duration-200">
                 Terms of Service
               </a>
-              <a href="/cookies" className="hover:text-primary-400 transition-colors duration-200">
+              <a href="/cookies" className="hover:text-blue-400 transition-colors duration-200">
                 Cookie Settings
               </a>
             </div>

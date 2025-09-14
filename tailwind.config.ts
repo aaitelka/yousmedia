@@ -32,7 +32,7 @@ const config: Config = {
           800: '#007faa',
           900: '#006088',
         },
-        secondary: { // Pink / Magenta
+        secondary: { // primary / Magenta
           50: '#ffe6eb',
           100: '#ffb3c4',
           200: '#ff80a0',

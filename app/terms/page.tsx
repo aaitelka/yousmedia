@@ -4,6 +4,7 @@ import { ArrowLeft, FileText, Scale, AlertTriangle, CreditCard, Ban, Moon, Sun }
 import { Button } from '@/components/ui/button';
 import { useLanguage } from '@/lib/contexts/LanguageContext';
 import { useTheme } from '@/lib/contexts/ThemeContext';
+import Footer from '@/components/Footer';
 
 export default function Terms() {
   const { t, language, setLanguage } = useLanguage();
@@ -35,45 +36,7 @@ export default function Terms() {
               />
             </div>
 
-            <div className="flex items-center space-x-4">
-              <Button
-                variant="ghost"
-                size="icon"
-                onClick={() => setLanguage(language === 'fr' ? 'en' : 'fr')}
-                className="h-9 w-9 relative"
-              >
-                {language === 'fr' ? (
-                  <div className="w-6 h-4 relative overflow-hidden rounded-sm shadow-md">
-                    <div className="w-full h-full bg-blue-600"></div>
-                    <div className="w-2/3 h-full bg-white absolute left-1/3 top-0"></div>
-                    <div className="w-1/3 h-full bg-red-600 absolute right-0 top-0"></div>
-                  </div>
-                ) : (
-                  <div className="w-6 h-4 relative overflow-hidden rounded-sm shadow-md">
-                    <div className="w-full h-full bg-red-600"></div>
-                    <div className="w-full h-0.5 bg-white absolute top-0.5"></div>
-                    <div className="w-full h-0.5 bg-white absolute top-1"></div>
-                    <div className="w-full h-0.5 bg-white absolute top-1.5"></div>
-                    <div className="w-full h-0.5 bg-white absolute top-2"></div>
-                    <div className="w-full h-0.5 bg-white absolute top-2.5"></div>
-                    <div className="w-full h-0.5 bg-white absolute top-3"></div>
-                    <div className="w-full h-0.5 bg-white absolute top-3.5"></div>
-                    <div className="w-2.5 h-2 bg-blue-800 absolute top-0 left-0">
-                      <div className="w-0.5 h-0.5 bg-white absolute top-0.5 left-0.5"></div>
-                    </div>
-                  </div>
-                )}
-              </Button>
 
-              <Button
-                variant="ghost"
-                size="icon"
-                onClick={toggleTheme}
-                className="h-9 w-9"
-              >
-                {theme === 'light' ? <Moon className="h-4 w-4" /> : <Sun className="h-4 w-4" />}
-              </Button>
-            </div>
           </div>
         </div>
       </header>
@@ -83,10 +46,10 @@ export default function Terms() {
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-4xl">
           {/* Hero Section */}
           <div className="text-center mb-12">
-            <div className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-br from-purple-500 to-blue-700 rounded-2xl mb-6">
+            <div className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-br from-primary-300 to-primary-600 rounded-2xl mb-6">
               <Scale className="w-8 h-8 text-white" />
             </div>
-            <h1 className="text-4xl md:text-5xl font-bold mb-4 bg-gradient-to-r bg-gradient-to-r from-primary-400 via-secondary-400 to-[#ff9901] bg-clip-text text-transparent">
+            <h1 className="text-4xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-primary-300 to-primary-600 bg-clip-text text-transparent">
               {language === 'fr' ? 'Conditions d\'Utilisation' : 'Terms of Service'}
             </h1>
             <p className="text-lg text-gray-600 dark:text-gray-400">
@@ -105,7 +68,7 @@ export default function Terms() {
                 <>
                   <section className="mb-8">
                     <div className="flex items-center gap-3 mb-4">
-                      <FileText className="w-6 h-6 text-purple-500" />
+                      <FileText className="w-6 h-6 text-primary-500" />
                       <h2 className="text-2xl font-bold text-gray-900 dark:text-gray-100">1. Acceptation des Conditions</h2>
                     </div>
                     <p className="leading-relaxed">
@@ -117,7 +80,7 @@ export default function Terms() {
 
                   <section className="mb-8">
                     <div className="flex items-center gap-3 mb-4">
-                      <Scale className="w-6 h-6 text-purple-500" />
+                      <Scale className="w-6 h-6 text-primary-500" />
                       <h2 className="text-2xl font-bold text-gray-900 dark:text-gray-100">2. Description du Service</h2>
                     </div>
                     <p className="mb-4">
@@ -134,7 +97,7 @@ export default function Terms() {
 
                   <section className="mb-8">
                     <div className="flex items-center gap-3 mb-4">
-                      <AlertTriangle className="w-6 h-6 text-purple-500" />
+                      <AlertTriangle className="w-6 h-6 text-primary-500" />
                       <h2 className="text-2xl font-bold text-gray-900 dark:text-gray-100">3. Obligations de l'Utilisateur</h2>
                     </div>
                     <p className="mb-4">En utilisant nos services, vous vous engagez à :</p>
@@ -150,7 +113,7 @@ export default function Terms() {
 
                   <section className="mb-8">
                     <div className="flex items-center gap-3 mb-4">
-                      <FileText className="w-6 h-6 text-purple-500" />
+                      <FileText className="w-6 h-6 text-primary-500" />
                       <h2 className="text-2xl font-bold text-gray-900 dark:text-gray-100">4. Propriété Intellectuelle</h2>
                     </div>
                     <h3 className="text-xl font-semibold mb-3 text-gray-900 dark:text-gray-100">4.1 Contenu Utilisateur</h3>
@@ -169,7 +132,7 @@ export default function Terms() {
 
                   <section className="mb-8">
                     <div className="flex items-center gap-3 mb-4">
-                      <CreditCard className="w-6 h-6 text-purple-500" />
+                      <CreditCard className="w-6 h-6 text-primary-500" />
                       <h2 className="text-2xl font-bold text-gray-900 dark:text-gray-100">5. Tarification et Paiements</h2>
                     </div>
                     <ul className="list-disc pl-6 mb-4 space-y-2">
@@ -183,7 +146,7 @@ export default function Terms() {
 
                   <section className="mb-8">
                     <div className="flex items-center gap-3 mb-4">
-                      <Ban className="w-6 h-6 text-purple-500" />
+                      <Ban className="w-6 h-6 text-primary-500" />
                       <h2 className="text-2xl font-bold text-gray-900 dark:text-gray-100">6. Suspension et Résiliation</h2>
                     </div>
                     <p className="mb-4">
@@ -199,7 +162,7 @@ export default function Terms() {
 
                   <section className="mb-8">
                     <div className="flex items-center gap-3 mb-4">
-                      <AlertTriangle className="w-6 h-6 text-purple-500" />
+                      <AlertTriangle className="w-6 h-6 text-primary-500" />
                       <h2 className="text-2xl font-bold text-gray-900 dark:text-gray-100">7. Limitation de Responsabilité</h2>
                     </div>
                     <p className="mb-4">
@@ -211,14 +174,14 @@ export default function Terms() {
 
                   <section>
                     <div className="flex items-center gap-3 mb-4">
-                      <Scale className="w-6 h-6 text-purple-500" />
+                      <Scale className="w-6 h-6 text-primary-500" />
                       <h2 className="text-2xl font-bold text-gray-900 dark:text-gray-100">8. Droit Applicable</h2>
                     </div>
                     <p className="mb-4">
                       Ces conditions sont régies par le droit marocain. Tout litige sera soumis
                       à la juridiction exclusive des tribunaux de Casablanca, Maroc.
                     </p>
-                    <div className="bg-purple-50 dark:bg-purple-900/20 p-4 rounded-lg">
+                    <div className="bg-primary-50 dark:bg-primary-900/20 p-4 rounded-lg">
                       <p><strong>Contact :</strong> contact@yousmedia.ma</p>
                       <p><strong>Adresse :</strong> 123 Avenue Mohammed V, Casablanca, Maroc</p>
                     </div>
@@ -228,7 +191,7 @@ export default function Terms() {
                 <>
                   <section className="mb-8">
                     <div className="flex items-center gap-3 mb-4">
-                      <FileText className="w-6 h-6 text-purple-500" />
+                      <FileText className="w-6 h-6 text-primary-500" />
                       <h2 className="text-2xl font-bold text-gray-900 dark:text-gray-100">1. Acceptance of Terms</h2>
                     </div>
                     <p className="leading-relaxed">
@@ -239,7 +202,7 @@ export default function Terms() {
 
                   <section className="mb-8">
                     <div className="flex items-center gap-3 mb-4">
-                      <Scale className="w-6 h-6 text-purple-500" />
+                      <Scale className="w-6 h-6 text-primary-500" />
                       <h2 className="text-2xl font-bold text-gray-900 dark:text-gray-100">2. Service Description</h2>
                     </div>
                     <p className="mb-4">
@@ -256,7 +219,7 @@ export default function Terms() {
 
                   <section className="mb-8">
                     <div className="flex items-center gap-3 mb-4">
-                      <AlertTriangle className="w-6 h-6 text-purple-500" />
+                      <AlertTriangle className="w-6 h-6 text-primary-500" />
                       <h2 className="text-2xl font-bold text-gray-900 dark:text-gray-100">3. User Obligations</h2>
                     </div>
                     <p className="mb-4">By using our services, you agree to:</p>
@@ -272,7 +235,7 @@ export default function Terms() {
 
                   <section className="mb-8">
                     <div className="flex items-center gap-3 mb-4">
-                      <FileText className="w-6 h-6 text-purple-500" />
+                      <FileText className="w-6 h-6 text-primary-500" />
                       <h2 className="text-2xl font-bold text-gray-900 dark:text-gray-100">4. Intellectual Property</h2>
                     </div>
                     <h3 className="text-xl font-semibold mb-3 text-gray-900 dark:text-gray-100">4.1 User Content</h3>
@@ -290,7 +253,7 @@ export default function Terms() {
 
                   <section className="mb-8">
                     <div className="flex items-center gap-3 mb-4">
-                      <CreditCard className="w-6 h-6 text-purple-500" />
+                      <CreditCard className="w-6 h-6 text-primary-500" />
                       <h2 className="text-2xl font-bold text-gray-900 dark:text-gray-100">5. Pricing and Payments</h2>
                     </div>
                     <ul className="list-disc pl-6 mb-4 space-y-2">
@@ -304,7 +267,7 @@ export default function Terms() {
 
                   <section className="mb-8">
                     <div className="flex items-center gap-3 mb-4">
-                      <Ban className="w-6 h-6 text-purple-500" />
+                      <Ban className="w-6 h-6 text-primary-500" />
                       <h2 className="text-2xl font-bold text-gray-900 dark:text-gray-100">6. Suspension and Termination</h2>
                     </div>
                     <p className="mb-4">
@@ -320,7 +283,7 @@ export default function Terms() {
 
                   <section className="mb-8">
                     <div className="flex items-center gap-3 mb-4">
-                      <AlertTriangle className="w-6 h-6 text-purple-500" />
+                      <AlertTriangle className="w-6 h-6 text-primary-500" />
                       <h2 className="text-2xl font-bold text-gray-900 dark:text-gray-100">7. Limitation of Liability</h2>
                     </div>
                     <p className="mb-4">
@@ -332,14 +295,14 @@ export default function Terms() {
 
                   <section>
                     <div className="flex items-center gap-3 mb-4">
-                      <Scale className="w-6 h-6 text-purple-500" />
+                      <Scale className="w-6 h-6 text-primary-500" />
                       <h2 className="text-2xl font-bold text-gray-900 dark:text-gray-100">8. Governing Law</h2>
                     </div>
                     <p className="mb-4">
                       These terms are governed by Moroccan law. Any dispute will be subject to
                       the exclusive jurisdiction of the courts of Casablanca, Morocco.
                     </p>
-                    <div className="bg-purple-50 dark:bg-purple-900/20 p-4 rounded-lg">
+                    <div className="bg-primary-50 dark:bg-primary-900/20 p-4 rounded-lg">
                       <p><strong>Contact:</strong> contact@yousmedia.ma</p>
                       <p><strong>Address:</strong> 123 Mohammed V Avenue, Casablanca, Morocco</p>
                     </div>
@@ -350,6 +313,7 @@ export default function Terms() {
           </div>
         </div>
       </main>
+      <Footer />
     </div>
   );
 }
