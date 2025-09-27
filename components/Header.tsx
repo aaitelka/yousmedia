@@ -56,10 +56,10 @@ export default function Header() {
 
           <nav className="hidden md:flex items-center space-x-8">
             <button
-              onClick={() => scrollToSection("features")}
+              onClick={() => scrollToSection("services")}
               className="text-gray-100 dark:text-gray-300 hover:text-primary-600 dark:hover:text-primary-400 transition-colors"
             >
-              {t("header", "features")}
+              {t("header", "services")}
             </button>
             <button
               onClick={() => scrollToSection("about")}

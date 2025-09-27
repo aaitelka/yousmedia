@@ -1,6 +1,6 @@
 export const fr = {
   header: {
-    features: "Fonctionnalités",
+    services: "Services",
     portfolio: "Portfolio",
     about: "À Propos",
     contact: "Contact"
@@ -13,15 +13,21 @@ export const fr = {
     getStarted: "Commencer",
     watchDemo: "Voir la démo"
   },
-  features: {
+  services: {
     title: "Tout ce dont vous avez besoin pour créer",
     subtitle: "Des outils puissants et intuitifs pour donner vie à vos idées créatives",
-    creativeTools: "Outils Créatifs",
-    creativeToolsDesc: "Suite complète d'outils de création pour tous vos besoins artistiques",
-    collaboration: "Collaboration",
-    collaborationDesc: "Travaillez en équipe en temps réel sur vos projets créatifs",
-    cloudSync: "Sync Cloud",
-    cloudSyncDesc: "Vos créations synchronisées sur tous vos appareils"
+    web: "💻 Création & Développement Web",
+    webDesc: "Des sites modernes, rapides et optimisés pour booster votre présence en ligne.",
+    social: "📱 Social Media Marketing",
+    socialDesc: "Faites briller votre marque sur les réseaux avec du contenu créatif et des campagnes percutantes.",
+    ads: "🎯 Publicité Digitale (Ads)",
+    adsDesc: "Touchez vos clients au bon moment grâce à des campagnes ciblées et performantes.",
+    branding: "🎨 Branding & Design",
+    brandingDesc: "Une identité visuelle forte et mémorable qui reflète parfaitement votre marque.",
+    seo: "🔎 SEO & Référencement",
+    seoDesc: "Maximisez votre visibilité et grimpez en tête des résultats Google.",
+    strategy: "🧭 Conseil & Stratégie Digitale",
+    strategyDesc: "Une vision claire, un plan d’action efficace, et des résultats mesurables.",
   },
   about: {
     title: "Notre Mission",

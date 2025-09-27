@@ -107,10 +107,10 @@ export default function Cookies() {
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-4xl">
           {/* Hero Section */}
           <div className="text-center mb-12">
-            <div className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-br from-primary-300 to-primary-600 rounded-2xl mb-6">
+            <div className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-br from-primary-100 to-primary-300 rounded-2xl mb-6">
               <Cookie className="w-8 h-8 text-white" />
             </div>
-            <h1 className="text-4xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-primary-300 to-primary-600 bg-clip-text text-transparent">
+            <h1 className="text-4xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-primary-100 to-primary-300 bg-clip-text text-transparent">
               {language === 'fr' ? 'Paramètres des Cookies' : 'Cookie Settings'}
             </h1>
             <p className="text-lg text-gray-600 dark:text-gray-400">
@@ -252,7 +252,7 @@ export default function Cookies() {
             <Button
               onClick={saveSettings}
               size="lg"
-              className="px-8 py-4 text-lg bg-gradient-to-r from-primary-300 to-primary-600 hover:from-primary-700 hover:to-blue-700 text-white border-0 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105"
+              className="px-8 py-4 text-lg bg-gradient-to-r from-primary-100 to-primary-300 hover:from-primary-700 hover:to-blue-700 text-white border-0 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105"
             >
               {language === 'fr' ? 'Sauvegarder les Paramètres' : 'Save Settings'}
             </Button>
@@ -269,7 +269,7 @@ export default function Cookies() {
 
           {/* Additional Information */}
           <div className="mt-12 bg-white/5 dark:bg-white/5 backdrop-blur-sm border border-white/20 rounded-3xl p-8">
-            <h2 className="text-2xl font-bold mb-4 bg-gradient-to-r from-primary-300 to-primary-600 bg-clip-text text-transparent">
+            <h2 className="text-2xl font-bold mb-4 bg-gradient-to-r from-primary-100 to-primary-300 bg-clip-text text-transparent">
               {language === 'fr' ? 'Informations Supplémentaires' : 'Additional Information'}
             </h2>
             <div className="prose prose-lg max-w-none text-gray-700 dark:text-gray-300">

@@ -1,6 +1,6 @@
 export const en = {
   header: {
-    features: "Features",
+    services: "Services",
     portfolio: "Portfolio",
     about: "About",
     contact: "Contact"
@@ -13,15 +13,21 @@ export const en = {
     getStarted: "Get Started",
     watchDemo: "Watch Demo"
   },
-  features: {
+  services: {
     title: "Everything you need to create",
     subtitle: "Powerful and intuitive tools to bring your creative ideas to life",
-    creativeTools: "Creative Tools",
-    creativeToolsDesc: "Complete suite of creation tools for all your artistic needs",
-    collaboration: "Collaboration",
-    collaborationDesc: "Work in real-time with your team on creative projects",
-    cloudSync: "Cloud Sync",
-    cloudSyncDesc: "Your creations synced across all your devices"
+    web: "💻 Web Design & Development",
+    webDesc: "Modern, fast, and optimized websites to grow your online presence.",
+    social: "📱 Social Media Marketing",
+    socialDesc: "Make your brand shine with creative content and powerful campaigns.",
+    ads: "🎯 Digital Advertising (Ads)",
+    adsDesc: "Reach the right audience at the right time with targeted, high-performing ads.",
+    branding: "🎨 Branding & Design",
+    brandingDesc: "A strong, memorable identity that perfectly reflects your brand.",
+    seo: "🔎 SEO & Search Optimization",
+    seoDesc: "Boost your visibility and climb to the top of Google results.",
+    strategy: "🧭 Digital Strategy & Consulting",
+    strategyDesc: "Clear vision, actionable plan, and measurable growth."
   },
   about: {
     title: "Our Mission",
