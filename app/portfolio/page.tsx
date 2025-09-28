@@ -152,14 +152,14 @@ export default function Portfolio() {
             <div className="flex items-center space-x-4">
             <LanguageSelector onSelectLanguage={() => setIsMenuOpen(false)} />
 
-              <Button
+              {/* <Button
                 variant="ghost"
                 size="icon"
                 onClick={toggleTheme}
                 className="h-9 w-9"
               >
                 {theme === 'light' ? <Moon className="h-4 w-4" /> : <Sun className="h-4 w-4" />}
-              </Button>
+              </Button> */}
             </div>
           </div>
         </div>

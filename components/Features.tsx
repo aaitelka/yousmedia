@@ -41,10 +41,10 @@ export default function Features() {
   ];
 
   return (
-    <section id="services" className="py-20 relative">
+    <section id="services" className="pt-20 relative">
       <div className="absolute inset-0 bg-gradient-to-b from-transparent via-primary-50/10 to-transparent dark:via-primary-950/10"></div>
 
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      <div className="container mx-auto px-4 sm:px-4 md:px-6 lg:px-8 relative z-10">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-primary-100 to-primary-300 bg-clip-text text-transparent">
             {t('services', 'title')}
@@ -54,7 +54,7 @@ export default function Features() {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 lg:gap-12">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-12">
           {services.map((service, index) => (
             <div
               key={index}
@@ -65,7 +65,7 @@ export default function Features() {
                   {service.icon}
                 </div>
               </div>
-              <h3 className="text-2xl font-bold mb-4 text-gray-900 dark:text-gray-100">
+              <h3 className="text-xl font-bold mb-4 text-gray-900 dark:text-gray-100">
                 {service.title}
               </h3>
               <p className="text-gray-600 dark:text-gray-400 leading-relaxed">

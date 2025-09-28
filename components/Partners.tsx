@@ -40,7 +40,7 @@ export default function Partners() {
   }, []);
 
   return (
-    <section className="py-20 relative overflow-hidden">
+    <section id="partners" className="pt-20 relative overflow-hidden">
       {/* Gradient fades */}
       <div className="absolute left-0 top-0 w-32 h-full bg-gradient-to-r from-white dark:from-gray-950 to-transparent pointer-events-none z-10"></div>
       <div className="absolute right-0 top-0 w-32 h-full bg-gradient-to-l from-white dark:from-gray-950 to-transparent pointer-events-none z-10"></div>

@@ -68,6 +68,12 @@ export default function Header() {
               {t("header", "about")}
             </button>
             <button
+              onClick={() => scrollToSection("partners")}
+              className="text-gray-100 dark:text-gray-300 hover:text-primary-600 dark:hover:text-primary-400 transition-colors"
+            >
+              {t("header", "partners")}
+            </button>
+            <button
               onClick={() => scrollToSection("contact")}
               className="text-gray-100 dark:text-gray-300 hover:text-primary-600 dark:hover:text-primary-400 transition-colors"
             >

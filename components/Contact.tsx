@@ -74,7 +74,7 @@ export default function Contact() {
   return (
     <section id="contact" className="py-20 relative">
       {/* background overlay */}
-      <div className="absolute inset-0 bg-gradient-to-br from-primary-900/20 via-blue-900/20 to-indigo-900/20"></div>
+      <div className="absolute inset-0 bg-gradient-to-r from-white dark:from-gray-950 to-transparent"></div>
 
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="max-w-6xl mx-auto">

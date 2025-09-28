@@ -1,46 +1,72 @@
 "use client";
 
 import { useLanguage } from '@/lib/contexts/LanguageContext';
+import { Card, CardContent } from './ui/card';
 
 export default function About() {
   const { t } = useLanguage();
 
-  return (
-    <section id="about" className="py-20 relative">
-      <div className="absolute inset-0 bg-gradient-to-r from-primary-900/10 via-transparent to-blue-900/10"></div>
+return (
+  <section id="about" className="pt-20 relative">
+    <div className="absolute inset-0 bg-gradient-to-r from-primary-900/10 via-transparent to-blue-900/10"></div>
 
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        <div className="max-w-4xl mx-auto">
-          <div className="text-center mb-12">
-            <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-primary-100 to-primary-300 bg-clip-text text-transparent">
-              {t('about', 'title')}
-            </h2>
+    <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      <div className="max-w-6xl mx-auto">
+        {/* Title */}
+        <div className="text-center mb-12">
+          <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-primary-100 to-primary-300 bg-clip-text text-transparent">
+            {t('about', 'title')}
+          </h2>
+          <p className="text-gray-700 dark:text-gray-300 leading-relaxed text-xl max-w-3xl mx-auto">
+            {t('about', 'text')}
+          </p>
+        </div>
+
+        {/* Grid for Who / Mission / Vision / Values */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+          {/* Who We Are */}
+          <div className="bg-white/5 dark:bg-white/5 backdrop-blur-sm border border-white/20 rounded-2xl p-6">
+            <h3 className="text-2xl font-bold text-primary-200 mb-3">
+              {t('about', 'who')}
+            </h3>
+            <p className="text-gray-700 dark:text-gray-300 leading-relaxed">
+              {t('about', 'whoText')}
+            </p>
           </div>
 
-          <div className="bg-white/5 dark:bg-white/5 backdrop-blur-sm border border-white/20 rounded-3xl p-8 md:p-12">
-            <div className="prose prose-lg md:prose-xl prose-primary dark:prose-invert max-w-none">
-              <p className="text-gray-700 dark:text-gray-300 leading-relaxed text-center text-xl">
-                {t('about', 'text')}
-              </p>
-            </div>
+          {/* Mission */}
+          <div className="bg-white/5 dark:bg-white/5 backdrop-blur-sm border border-white/20 rounded-2xl p-6">
+            <h3 className="text-2xl font-bold text-primary-200 mb-3">
+              {t('about', 'mission')}
+            </h3>
+            <p className="text-gray-700 dark:text-gray-300 leading-relaxed">
+              {t('about', 'missionText')}
+            </p>
+          </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-12">
-              <div className="text-center">
-                <div className="text-3xl font-bold text-primary-600 mb-2">10K+</div>
-                <div className="text-gray-600 dark:text-gray-400">Créateurs actifs</div>
-              </div>
-              <div className="text-center">
-                <div className="text-3xl font-bold text-blue-600 mb-2">50K+</div>
-                <div className="text-gray-600 dark:text-gray-400">Projets créés</div>
-              </div>
-              <div className="text-center">
-                <div className="text-3xl font-bold text-primary-600 mb-2">99%</div>
-                <div className="text-gray-600 dark:text-gray-400">Satisfaction client</div>
-              </div>
-            </div>
+          {/* Vision */}
+          <div className="bg-white/5 dark:bg-white/5 backdrop-blur-sm border border-white/20 rounded-2xl p-6">
+            <h3 className="text-2xl font-bold text-primary-200 mb-3">
+              {t('about', 'vision')}
+            </h3>
+            <p className="text-gray-700 dark:text-gray-300 leading-relaxed">
+              {t('about', 'visionText')}
+            </p>
+          </div>
+
+          {/* Values */}
+          <div className="bg-white/5 dark:bg-white/5 backdrop-blur-sm border border-white/20 rounded-2xl p-6">
+            <h3 className="text-2xl font-bold text-primary-200 mb-3">
+              {t('about', 'values')}
+            </h3>
+            <p className="text-gray-700 dark:text-gray-300 leading-relaxed">
+              {t('about', 'valuesText')}
+            </p>
           </div>
         </div>
       </div>
-    </section>
-  );
+    </div>
+  </section>
+);
+
 }

@@ -2,6 +2,7 @@ export const fr = {
   header: {
     services: "Services",
     portfolio: "Portfolio",
+    partners: "Partenaires",
     about: "À Propos",
     contact: "Contact"
   },
@@ -30,8 +31,17 @@ export const fr = {
     strategyDesc: "Une vision claire, un plan d’action efficace, et des résultats mesurables.",
   },
   about: {
-    title: "Notre Mission",
-    text: "Chez YousMedia, nous croyons que chaque personne a une histoire unique à raconter. Notre mission est de fournir les outils et la plateforme nécessaires pour que vous puissiez exprimer votre créativité sans limites."
+    title: "À Propos",
+    text: "Chez YousMedia, nous croyons que chaque personne a une histoire unique à raconter. Notre mission est de fournir les outils et la plateforme nécessaires pour que vous puissiez exprimer votre créativité sans limites.",
+    who: "Qui sommes-nous ?",
+    whoText: "YousMedia transforme vos idées en succès digitaux concrets. Depuis 4 ans, nous aidons startups, PME et e-commerces à briller en ligne. Créativité, stratégie et technologie : notre trio pour maximiser l’impact de chaque projet.",
+    mission: "Notre mission",
+    missionText: "Donner vie à vos idées. Créer des solutions modernes, innovantes et performantes. Maximiser votre présence en ligne et vos résultats.",
+    vision: "Notre vision",
+    visionText: "Un monde où chaque entreprise peut exploiter le digital à son plein potentiel. Des expériences en ligne innovantes et mémorables pour un impact concret et durable.",
+    values: "Nos valeurs",
+    valuesText: "Créativité. Innovation. Efficacité. Chaque projet est une chance de dépasser vos attentes et de générer des résultats tangibles.",
+    creators: "creators"
   },
   contact: {
     title: "Prêt à commencer ?",
