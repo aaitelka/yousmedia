@@ -12,17 +12,14 @@ export default function Partners() {
   const partners = [
 
     { name: "Masdac", logo: "./masdac.png" },
-    { name: "Sof Kitchen", logo: "./sofkitchen.jpg" },
-    { name: "Amazon", logo: "https://images.pexels.com/photos/1148820/pexels-photo-1148820.jpeg?auto=compress&cs=tinysrgb&w=200&h=100&fit=crop" },
-    { name: "Apple", logo: "https://images.pexels.com/photos/788946/pexels-photo-788946.jpeg?auto=compress&cs=tinysrgb&w=200&h=100&fit=crop" },
+    { name: "Difaf Assurance", logo: "./difaf.webp" },
+    { name: "WeSurfSkate Morocco", logo: "./we-skate-surf.webp" },
     { name: "Masdac", logo: "./masdac.png" },
-    { name: "Sof Kitchen", logo: "./sofkitchen.jpg" },
-    { name: "Amazon", logo: "https://images.pexels.com/photos/1148820/pexels-photo-1148820.jpeg?auto=compress&cs=tinysrgb&w=200&h=100&fit=crop" },
-    { name: "Apple", logo: "https://images.pexels.com/photos/788946/pexels-photo-788946.jpeg?auto=compress&cs=tinysrgb&w=200&h=100&fit=crop" },
-    { name: "Masdac", logo: "./masdac.png" },
-    { name: "Sof Kitchen", logo: "./sofkitchen.jpg" },
-    { name: "Amazon", logo: "https://images.pexels.com/photos/1148820/pexels-photo-1148820.jpeg?auto=compress&cs=tinysrgb&w=200&h=100&fit=crop" },
-    { name: "Apple", logo: "https://images.pexels.com/photos/788946/pexels-photo-788946.jpeg?auto=compress&cs=tinysrgb&w=200&h=100&fit=crop" },
+    { name: "GoNaji Restaurant", logo: "./go-naji-logo.png" },
+    { name: "Wave Chaser Surfhouse", logo: "./wave-chaser-morocco-logo.png" },
+    { name: "Era Bio Energy", logo: "./era-bio-energy-logo.png" },
+    { name: "FPS Maroc", logo: "./fps-logo.png" },
+    { name: "TamraZen Retreat", logo: "./tamra-zen-logo.webp" },
   ];
 
   useEffect(() => {
@@ -88,14 +85,14 @@ export default function Partners() {
       <style dangerouslySetInnerHTML={{
         __html: `
           @keyframes infiniteCarousel {
-            0% { 
-              transform: translateX(0); 
+            0% {
+              transform: translateX(0);
             }
-            100% { 
-              transform: translateX(calc(-100% / 3)); 
+            100% {
+              transform: translateX(calc(-100% / 3));
             }
           }
-          
+
           .carousel-animation {
             animation: infiniteCarousel 30s linear infinite;
           }
