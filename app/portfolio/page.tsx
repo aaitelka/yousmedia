@@ -26,7 +26,7 @@ interface Project {
 const projects: Project[] = [
   {
     id: 1,
-    title: "MASDAC - www.masdac.ma",
+    title: "MASDAC",
     description: {
       fr: "Site institutionnel moderne pour la Moroccan Agency of Services Development And Consulting. Design corporate et interface professionnelle.",
       en: "Modern institutional website for the Moroccan Agency of Services Development And Consulting. Corporate design and professional interface."
@@ -35,69 +35,98 @@ const projects: Project[] = [
     tags: ["Wordpress", "Elementor"],
     date: "2024",
     category: "web",
-    liveUrl: "www.masdac.ma",
+    liveUrl: "https://www.masdac.ma",
   },
   {
     id: 2,
-    title: "Mobile Banking App",
+    title: "Difaf Assurance",
     description: {
-      fr: "Application bancaire mobile sécurisée avec authentification biométrique",
-      en: "Secure mobile banking app with biometric authentication"
+      fr: "Plateforme d’assurance intuitive avec gestion des offres et demandes de devis en ligne.",
+      en: "Intuitive insurance platform with offers management and online quote requests."
     },
-    image: "https://images.pexels.com/photos/4386321/pexels-photo-4386321.jpeg?auto=compress&cs=tinysrgb&w=800",
-    tags: ["React Native", "TypeScript", "Firebase"],
+    image: "./difaf-portfolio.jpeg",
+    tags: ["Express", "AngularJS", "TypeScript", "Firebase"],
     date: "2024",
-    category: "mobile"
+    category: "web",
+    liveUrl: "https://www.difafassurance.ma"
   },
   {
     id: 3,
-    title: "Brand Identity Design",
+    title: "WeSurfSkate Morocco",
     description: {
-      fr: "Identité visuelle complète pour une startup technologique",
-      en: "Complete visual identity for a tech startup"
+      fr: "Site dynamique pour un camp de surf & skate, intégrant réservations et expériences clients.",
+      en: "Dynamic website for a surf & skate camp, integrating bookings and customer experiences."
     },
-    image: "https://images.pexels.com/photos/196644/pexels-photo-196644.jpeg?auto=compress&cs=tinysrgb&w=800",
+    image: "./we-skate-surf-portfolio.jpeg",
     tags: ["Branding", "Logo Design", "UI/UX"],
     date: "2023",
-    category: "branding"
+    category: "branding",
+    liveUrl: "https://www.wesurfskatemorocco.com"
   },
   {
     id: 4,
-    title: "SaaS Dashboard",
+    title: "GoNaji Restaurant",
     description: {
       fr: "Tableau de bord analytique pour plateforme SaaS avec visualisations avancées",
       en: "Analytics dashboard for SaaS platform with advanced visualizations"
     },
-    image: "https://images.pexels.com/photos/590020/pexels-photo-590020.jpeg?auto=compress&cs=tinysrgb&w=800",
-    tags: ["Vue.js", "D3.js", "Python", "PostgreSQL"],
+    image: "./go-naji-portfolio.jpeg",
+    tags: ["Wordpress", "UI Design", "Prototyping"],
     date: "2023",
     category: "web",
-    liveUrl: "https://example.com"
+    liveUrl: "https://www.gonaji.com"
   },
   {
     id: 5,
-    title: "Restaurant Website",
+    title: "Wave Chaser Surfhouse",
     description: {
       fr: "Site web responsive pour chaîne de restaurants avec système de réservation",
       en: "Responsive website for restaurant chain with reservation system"
     },
-    image: "https://images.pexels.com/photos/262978/pexels-photo-262978.jpeg?auto=compress&cs=tinysrgb&w=800",
-    tags: ["Next.js", "Tailwind CSS", "Supabase"],
+    image: "./wave-chaser-surfhouse-portfolio.jpeg",
+    tags: ["Wordpress", "UI Design", "Prototyping"],
     date: "2023",
     category: "web",
-    liveUrl: "https://example.com"
+    liveUrl: "https://www.wavechasermorocco.com"
   },
   {
     id: 6,
-    title: "Fitness App UI",
+    title: "Era Bio Energy",
     description: {
-      fr: "Interface utilisateur moderne pour application de fitness avec suivi d'activité",
-      en: "Modern UI for fitness app with activity tracking"
+      fr: "Site professionnel dans le domaine de l’énergie solaire, valorisant l’innovation et les solutions écologiques.",
+      en: "Professional website in the solar energy field, highlighting innovation and eco-friendly solutions."
     },
-    image: "https://images.pexels.com/photos/4164418/pexels-photo-4164418.jpeg?auto=compress&cs=tinysrgb&w=800",
-    tags: ["Figma", "UI Design", "Prototyping"],
+    image: "./era-bio-energy-portfolio.jpeg",
+    tags: ["Wordpress", "UI Design", "Prototyping"],
     date: "2023",
-    category: "design"
+    category: "web",
+    liveUrl: "https://www.erabioenergy.com"
+  },
+  {
+    id: 7,
+    title: "FPS Maroc",
+    description: {
+      fr: "Entreprise spécialisée en solutions gaz et fluides. Site corporate avec mise en avant des projets et expertises.",
+      en: "Company specialized in gas and fluid solutions. Corporate site highlighting projects and expertise."
+    },
+    image: "./fps-maroc-portfolio.jpeg",
+    tags: ["Wordpress", "UI Design", "Prototyping"],
+    date: "2023",
+    category: "web",
+    liveUrl: "https://www.fpsmaroc.com"
+  },
+  {
+    id: 8,
+    title: "TamraZen Retreat",
+    description: {
+      fr: "Camp de surf, yoga et skate à Tamraght, avec système de réservation intégré et contenu immersif.",
+      en: "Surf, yoga, and skate retreat in Tamraght, with integrated booking system and immersive content."
+    },
+    image: "./tamra-zen-retreat-portfolio.jpeg",
+    tags: ["Wordpress", "UI Design", "Prototyping"],
+    date: "2023",
+    category: "web",
+    liveUrl: "https://www.tamrazen.com"
   }
 ];
 

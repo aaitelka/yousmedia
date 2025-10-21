@@ -7,6 +7,10 @@ import { useLanguage } from "@/lib/contexts/LanguageContext";
 import { Button } from "@/components/ui/button";
 import LanguageSelector from "./LanguageSelector";
 
+type LanguageSelectorProps = {
+  onSelectLanguage: () => void;
+};
+
 export default function Header() {
   const { theme, toggleTheme } = useTheme();
   const { language, setLanguage, t } = useLanguage();

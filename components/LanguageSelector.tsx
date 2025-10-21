@@ -2,7 +2,12 @@ import { useState, useRef, useEffect } from "react";
 import { ChevronDown } from "lucide-react";
 import { useLanguage } from "../lib/contexts/LanguageContext";
 
-const LanguageSelector = () => {
+// ✅ Define props for external callback
+type LanguageSelectorProps = {
+  onSelectLanguage?: () => void;
+};
+
+const LanguageSelector: React.FC<LanguageSelectorProps> = ({ onSelectLanguage }) => {
   const { language, setLanguage } = useLanguage();
   const [isOpen, setIsOpen] = useState(false);
   const containerRef = useRef<HTMLDivElement>(null);
@@ -15,8 +20,12 @@ const LanguageSelector = () => {
   const currentLanguage = languages.find((lang) => lang.code === language);
 
   const handleLanguageChange = (code: "en" | "fr") => {
-    setLanguage(code);
+    setLanguage(code);       // ✅ update context
     setIsOpen(false);
+
+    if (onSelectLanguage) {
+      onSelectLanguage();    // ✅ call parent callback if provided
+    }
   };
 
   useEffect(() => {
@@ -64,8 +73,8 @@ const LanguageSelector = () => {
               className={`w-full flex items-center gap-2 px-3 py-2 text-left text-sm transition-colors duration-200
                 ${
                   language === lang.code
-                    ? "text-primary-400 font-semibold" // selected stays primary
-                    : "text-white hover:text-primary-400" // unselected white, turns primary on hover
+                    ? "text-primary-400 font-semibold"
+                    : "text-white hover:text-primary-400"
                 }`}
             >
               <span className="text-lg">{lang.flag}</span>
