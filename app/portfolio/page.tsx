@@ -26,17 +26,16 @@ interface Project {
 const projects: Project[] = [
   {
     id: 1,
-    title: "E-Commerce Platform",
+    title: "MASDAC - www.masdac.ma",
     description: {
-      fr: "Plateforme e-commerce moderne avec paiement intégré et gestion d'inventaire en temps réel",
-      en: "Modern e-commerce platform with integrated payment and real-time inventory management"
+      fr: "Site institutionnel moderne pour la Moroccan Agency of Services Development And Consulting. Design corporate et interface professionnelle.",
+      en: "Modern institutional website for the Moroccan Agency of Services Development And Consulting. Corporate design and professional interface."
     },
-    image: "https://images.pexels.com/photos/230544/pexels-photo-230544.jpeg?auto=compress&cs=tinysrgb&w=800",
-    tags: ["React", "Node.js", "MongoDB", "Stripe"],
+    image: "./masdac-portfolio.jpeg",
+    tags: ["Wordpress", "Elementor"],
     date: "2024",
     category: "web",
-    liveUrl: "https://example.com",
-    githubUrl: "https://github.com"
+    liveUrl: "www.masdac.ma",
   },
   {
     id: 2,
