@@ -144,7 +144,7 @@ export default function Header() {
               onClick={() => scrollToSection("features")}
               className="block text-white dark:text-gray-300 hover:text-primary-600 dark:hover:text-primary-400 transition-colors transform hover:translate-x-2 duration-200"
             >
-              {t("header", "features")}
+              {t("header", "services")}
             </button>
             <button
               onClick={() => scrollToSection("about")}
