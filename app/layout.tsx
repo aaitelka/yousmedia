@@ -1,10 +1,10 @@
 import './globals.css';
 import type { Metadata } from 'next';
-import { Inter } from 'next/font/google';
+import { Exo } from 'next/font/google';
 import { ThemeProvider } from '@/lib/contexts/ThemeContext';
 import { LanguageProvider } from '@/lib/contexts/LanguageContext';
 
-const inter = Inter({ subsets: ['latin'] });
+const inter = Exo({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
   title: 'YousMedia - Create Your Idea',

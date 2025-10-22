@@ -5,6 +5,8 @@ import { ArrowLeft, ExternalLink, Github, Calendar, Tag, Moon, Sun } from 'lucid
 import { Button } from '@/components/ui/button';
 import { useLanguage } from '@/lib/contexts/LanguageContext';
 import { useTheme } from '@/lib/contexts/ThemeContext';
+import LanguageSelector from '@/components/LanguageSelector';
+import Footer from '@/components/Footer';
 
 interface Project {
   id: number;
@@ -24,79 +26,107 @@ interface Project {
 const projects: Project[] = [
   {
     id: 1,
-    title: "E-Commerce Platform",
+    title: "MASDAC",
     description: {
-      fr: "Plateforme e-commerce moderne avec paiement intégré et gestion d'inventaire en temps réel",
-      en: "Modern e-commerce platform with integrated payment and real-time inventory management"
+      fr: "Site institutionnel moderne pour la Moroccan Agency of Services Development And Consulting. Design corporate et interface professionnelle.",
+      en: "Modern institutional website for the Moroccan Agency of Services Development And Consulting. Corporate design and professional interface."
     },
-    image: "https://images.pexels.com/photos/230544/pexels-photo-230544.jpeg?auto=compress&cs=tinysrgb&w=800",
-    tags: ["React", "Node.js", "MongoDB", "Stripe"],
+    image: "./masdac-portfolio.jpeg",
+    tags: ["Wordpress", "Elementor"],
     date: "2024",
     category: "web",
-    liveUrl: "https://example.com",
-    githubUrl: "https://github.com"
+    liveUrl: "https://www.masdac.ma",
   },
   {
     id: 2,
-    title: "Mobile Banking App",
+    title: "Difaf Assurance",
     description: {
-      fr: "Application bancaire mobile sécurisée avec authentification biométrique",
-      en: "Secure mobile banking app with biometric authentication"
+      fr: "Plateforme d’assurance intuitive avec gestion des offres et demandes de devis en ligne.",
+      en: "Intuitive insurance platform with offers management and online quote requests."
     },
-    image: "https://images.pexels.com/photos/4386321/pexels-photo-4386321.jpeg?auto=compress&cs=tinysrgb&w=800",
-    tags: ["React Native", "TypeScript", "Firebase"],
+    image: "./difaf-portfolio.jpeg",
+    tags: ["Express", "AngularJS", "TypeScript", "Firebase"],
     date: "2024",
-    category: "mobile"
+    category: "web",
+    liveUrl: "https://www.difafassurance.ma"
   },
   {
     id: 3,
-    title: "Brand Identity Design",
+    title: "WeSurfSkate Morocco",
     description: {
-      fr: "Identité visuelle complète pour une startup technologique",
-      en: "Complete visual identity for a tech startup"
+      fr: "Site dynamique pour un camp de surf & skate, intégrant réservations et expériences clients.",
+      en: "Dynamic website for a surf & skate camp, integrating bookings and customer experiences."
     },
-    image: "https://images.pexels.com/photos/196644/pexels-photo-196644.jpeg?auto=compress&cs=tinysrgb&w=800",
+    image: "./we-skate-surf-portfolio.jpeg",
     tags: ["Branding", "Logo Design", "UI/UX"],
     date: "2023",
-    category: "branding"
+    category: "branding",
+    liveUrl: "https://www.wesurfskatemorocco.com"
   },
   {
     id: 4,
-    title: "SaaS Dashboard",
+    title: "GoNaji Restaurant",
     description: {
       fr: "Tableau de bord analytique pour plateforme SaaS avec visualisations avancées",
       en: "Analytics dashboard for SaaS platform with advanced visualizations"
     },
-    image: "https://images.pexels.com/photos/590020/pexels-photo-590020.jpeg?auto=compress&cs=tinysrgb&w=800",
-    tags: ["Vue.js", "D3.js", "Python", "PostgreSQL"],
+    image: "./go-naji-portfolio.jpeg",
+    tags: ["Wordpress", "UI Design", "Prototyping"],
     date: "2023",
     category: "web",
-    liveUrl: "https://example.com"
+    liveUrl: "https://www.gonaji.com"
   },
   {
     id: 5,
-    title: "Restaurant Website",
+    title: "Wave Chaser Surfhouse",
     description: {
       fr: "Site web responsive pour chaîne de restaurants avec système de réservation",
       en: "Responsive website for restaurant chain with reservation system"
     },
-    image: "https://images.pexels.com/photos/262978/pexels-photo-262978.jpeg?auto=compress&cs=tinysrgb&w=800",
-    tags: ["Next.js", "Tailwind CSS", "Supabase"],
+    image: "./wave-chaser-surfhouse-portfolio.jpeg",
+    tags: ["Wordpress", "UI Design", "Prototyping"],
     date: "2023",
     category: "web",
-    liveUrl: "https://example.com"
+    liveUrl: "https://www.wavechasermorocco.com"
   },
   {
     id: 6,
-    title: "Fitness App UI",
+    title: "Era Bio Energy",
     description: {
-      fr: "Interface utilisateur moderne pour application de fitness avec suivi d'activité",
-      en: "Modern UI for fitness app with activity tracking"
+      fr: "Site professionnel dans le domaine de l’énergie solaire, valorisant l’innovation et les solutions écologiques.",
+      en: "Professional website in the solar energy field, highlighting innovation and eco-friendly solutions."
     },
-    image: "https://images.pexels.com/photos/4164418/pexels-photo-4164418.jpeg?auto=compress&cs=tinysrgb&w=800",
-    tags: ["Figma", "UI Design", "Prototyping"],
+    image: "./era-bio-energy-portfolio.jpeg",
+    tags: ["Wordpress", "UI Design", "Prototyping"],
     date: "2023",
-    category: "design"
+    category: "web",
+    liveUrl: "https://www.erabioenergy.com"
+  },
+  {
+    id: 7,
+    title: "FPS Maroc",
+    description: {
+      fr: "Entreprise spécialisée en solutions gaz et fluides. Site corporate avec mise en avant des projets et expertises.",
+      en: "Company specialized in gas and fluid solutions. Corporate site highlighting projects and expertise."
+    },
+    image: "./fps-maroc-portfolio.jpeg",
+    tags: ["Wordpress", "UI Design", "Prototyping"],
+    date: "2023",
+    category: "web",
+    liveUrl: "https://www.fpsmaroc.com"
+  },
+  {
+    id: 8,
+    title: "TamraZen Retreat",
+    description: {
+      fr: "Camp de surf, yoga et skate à Tamraght, avec système de réservation intégré et contenu immersif.",
+      en: "Surf, yoga, and skate retreat in Tamraght, with integrated booking system and immersive content."
+    },
+    image: "./tamra-zen-retreat-portfolio.jpeg",
+    tags: ["Wordpress", "UI Design", "Prototyping"],
+    date: "2023",
+    category: "web",
+    liveUrl: "https://www.tamrazen.com"
   }
 ];
 
@@ -106,11 +136,11 @@ export default function Portfolio() {
   const [selectedCategory, setSelectedCategory] = useState<string>('all');
 
   const categories = [
-    { id: 'all', label: { fr: 'Tous', en: 'All' } },
-    { id: 'web', label: { fr: 'Web', en: 'Web' } },
-    { id: 'mobile', label: { fr: 'Mobile', en: 'Mobile' } },
-    { id: 'design', label: { fr: 'Design', en: 'Design' } },
-    { id: 'branding', label: { fr: 'Branding', en: 'Branding' } }
+    { id: 'all', label: t('portfolio', 'all') },
+    { id: 'web', label: t('portfolio', 'web') },
+    { id: 'mobile', label: t('portfolio', 'mobile') },
+    { id: 'design', label: t('portfolio', 'design') },
+    { id: 'branding', label: t('portfolio', 'branding') }
   ];
 
   const filteredProjects = selectedCategory === 'all'
@@ -120,6 +150,10 @@ export default function Portfolio() {
   const goHome = () => {
     window.location.href = '/';
   };
+
+  function setIsMenuOpen(arg0: boolean) {
+    throw new Error('Function not implemented.');
+  }
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-50 via-white to-gray-100 dark:from-gray-950 dark:via-black dark:to-gray-900">
@@ -136,44 +170,24 @@ export default function Portfolio() {
               >
                 <ArrowLeft className="h-4 w-4" />
               </Button>
-              <h1 className="text-2xl font-bold bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent">
-                YousMedia
-              </h1>
+              <img
+                src="/YousMedia-300x80.png"
+                alt="YousMedia Logo"
+                className="h-8 w-auto"
+              />
             </div>
 
             <div className="flex items-center space-x-4">
-              <Button
-                variant="ghost"
-                size="icon"
-                onClick={() => setLanguage(language === 'fr' ? 'en' : 'fr')}
-                className="h-9 w-9 relative"
-              >
-                {language === 'fr' ? (
-                  <div className="w-6 h-4 bg-blue-600 relative overflow-hidden rounded-sm">
-                    <div className="w-2 h-full bg-white absolute left-0"></div>
-                    <div className="w-2 h-full bg-red-600 absolute right-0"></div>
-                  </div>
-                ) : (
-                  <div className="w-6 h-4 relative overflow-hidden rounded-sm">
-                    <div className="w-full h-full bg-blue-800"></div>
-                    <div className="absolute inset-0 flex items-center justify-center">
-                      <div className="w-3 h-0.5 bg-white transform rotate-45"></div>
-                      <div className="w-3 h-0.5 bg-white transform -rotate-45 absolute"></div>
-                    </div>
-                    <div className="w-full h-1 bg-red-600 absolute bottom-0"></div>
-                    <div className="w-full h-1 bg-white absolute bottom-1"></div>
-                  </div>
-                )}
-              </Button>
+            <LanguageSelector onSelectLanguage={() => setIsMenuOpen(false)} />
 
-              <Button
+              {/* <Button
                 variant="ghost"
                 size="icon"
                 onClick={toggleTheme}
                 className="h-9 w-9"
               >
                 {theme === 'light' ? <Moon className="h-4 w-4" /> : <Sun className="h-4 w-4" />}
-              </Button>
+              </Button> */}
             </div>
           </div>
         </div>
@@ -184,11 +198,11 @@ export default function Portfolio() {
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           {/* Hero Section */}
           <div className="text-center mb-16">
-            <h1 className="text-4xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-purple-600 to-blue-600 bg-clip-text text-transparent">
-              {t('portfolioTitle')}
+            <h1 className="text-4xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-primary-100 to-primary-300 bg-clip-text text-transparent">
+              {t('portfolio', 'title')}
             </h1>
             <p className="text-xl text-gray-600 dark:text-gray-400 max-w-3xl mx-auto leading-relaxed">
-              {t('portfolioSubtitle')}
+              {t('portfolio', 'subtitle')}
             </p>
           </div>
 
@@ -201,11 +215,11 @@ export default function Portfolio() {
                 onClick={() => setSelectedCategory(category.id)}
                 className={`px-6 py-2 rounded-full transition-all duration-300 ${
                   selectedCategory === category.id
-                    ? 'bg-gradient-to-r from-purple-600 to-blue-600 text-white'
-                    : 'border-purple-400/30 text-purple-600 dark:text-purple-400 hover:bg-purple-600 hover:text-white'
+                    ? 'bg-gradient-to-r from-primary-100 to-primary-300 text-white'
+                    : 'border-primary-400/30 text-primary-600 dark:text-primary-400 hover:bg-primary-600 hover:text-white'
                 }`}
               >
-                {category.label[language]}
+                {category.label}
               </Button>
             ))}
           </div>
@@ -215,7 +229,7 @@ export default function Portfolio() {
             {filteredProjects.map((project, index) => (
               <div
                 key={project.id}
-                className="group bg-white/5 dark:bg-white/5 backdrop-blur-sm border border-white/20 rounded-2xl overflow-hidden hover:border-purple-400/50 transition-all duration-300 hover:transform hover:scale-105 hover:shadow-xl hover:shadow-purple-500/20"
+                className="group bg-white/5 dark:bg-white/5 backdrop-blur-sm border border-white/20 rounded-2xl overflow-hidden hover:border-primary-400/50 transition-all duration-300 hover:transform hover:scale-105 hover:shadow-xl hover:shadow-primary-500/20"
                 style={{
                   animationDelay: `${index * 100}ms`
                 }}
@@ -253,7 +267,7 @@ export default function Portfolio() {
 
                 <div className="p-6">
                   <div className="flex items-center gap-2 mb-3">
-                    <Calendar className="w-4 h-4 text-purple-400" />
+                    <Calendar className="w-4 h-4 text-primary-400" />
                     <span className="text-sm text-gray-500 dark:text-gray-400">{project.date}</span>
                   </div>
 
@@ -269,7 +283,7 @@ export default function Portfolio() {
                     {project.tags.map((tag, tagIndex) => (
                       <span
                         key={tagIndex}
-                        className="inline-flex items-center gap-1 px-3 py-1 bg-purple-100 dark:bg-purple-900/30 text-purple-600 dark:text-purple-400 rounded-full text-sm"
+                        className="inline-flex items-center gap-1 px-3 py-1 bg-primary-100 dark:bg-primary-900/30 text-primary-600 dark:text-primary-400 rounded-full text-sm"
                       >
                         <Tag className="w-3 h-3" />
                         {tag}
@@ -284,12 +298,13 @@ export default function Portfolio() {
           {filteredProjects.length === 0 && (
             <div className="text-center py-12">
               <p className="text-xl text-gray-600 dark:text-gray-400">
-                {language === 'fr' ? 'Aucun projet trouvé dans cette catégorie.' : 'No projects found in this category.'}
+                {t('portfolio', 'noProjects')}
               </p>
             </div>
           )}
         </div>
       </main>
+      <Footer />
     </div>
   );
 }

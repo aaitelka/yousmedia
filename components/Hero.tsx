@@ -2,7 +2,7 @@
 
 import { Play } from 'lucide-react';
 import { Button } from '@/components/ui/button';
-import Typewriter from './Typewriter';
+import Typewriter from "typewriter-effect";
 import { useLanguage } from '@/lib/contexts/LanguageContext';
 
 export default function Hero() {
@@ -10,53 +10,56 @@ export default function Hero() {
 
   return (
     <section id="hero" className="min-h-screen flex items-center justify-center relative overflow-hidden">
-      <div className="absolute inset-0 bg-gradient-to-br from-purple-900/20 via-blue-900/20 to-indigo-900/20"></div>
-      <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHZpZXdCb3g9IjAgMCA2MCA2MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxnIGZpbGw9IiM4YjVjZjYiIGZpbGwtb3BhY2l0eT0iMC4xIj48Y2lyY2xlIGN4PSIzMCIgY3k9IjMwIiByPSIxLjUiLz48L2c+PC9nPjwvc3ZnPg==')] opacity-30"></div>
-      
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
-        <div className="max-w-4xl mx-auto">
-          <div className="mb-8">
-            <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold mb-4">
-              <span className="bg-gradient-to-r from-purple-400 via-pink-400 to-blue-400 bg-clip-text text-transparent">
-                YousMedia
-              </span>
-            </h1>
-            <div className="text-2xl md:text-4xl lg:text-5xl font-light text-gray-700 dark:text-gray-300 min-h-[3rem] flex items-center justify-center">
-              (<Typewriter 
-                texts={[t('hero')]} 
-                speed={150}
-                loop={false}
-                className="text-purple-400"
-              />)
-            </div>
+      <div className="absolute inset-0 bg-gradient-to-br from-primary-900 via-secondary-900 to-indigo-900 dark:from-gray-900 dark:via-gray-800 dark:to-gray-900"></div>
+      <div className="absolute inset-0 bg-black/20"></div>
+
+      {/* Animated background elements */}
+      <div className="absolute inset-0 opacity-30">
+      {/* Cyan/Blue blob */}
+      <div className="absolute top-1/4 left-1/4 w-72 h-72 bg-gradient-to-tr from-[#00CFFF] to-[#29ABE2] rounded-full mix-blend-multiply filter blur-3xl animate-pulse"></div>
+
+      {/* Orange/Yellow blob */}
+      <div className="absolute top-3/4 right-1/4 w-72 h-72 bg-gradient-to-tr from-[#FF9900] to-[#FFB347] rounded-full mix-blend-multiply filter blur-3xl animate-pulse delay-1000"></div>
+
+      {/* primary/Red blob */}
+      <div className="absolute bottom-1/4 left-1/3 w-72 h-72 bg-gradient-to-tr from-[#FF2D55] to-[#FF5F7E] rounded-full mix-blend-multiply filter blur-3xl animate-pulse delay-2000"></div>
+      </div>
+      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <div className="space-y-8">
+          <div className="space-y-4">
+            <div className="flex items-center justify-center">
+              <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white leading-tight text-center z-10">
+                <Typewriter
+                  key={t('hero', 'title')}
+                  options={{
+                    wrapperClassName: "Typewriter__wrapper",
+                    cursorClassName: "Typewriter__cursor",
+                    delay: 50,
+                    loop: false,
+                  }}
+                  onInit={(typewriter) => {
+                    typewriter
+                      .typeString(
+                        `<span class='bg-gradient-to-r from-primary-400 via-secondary-400 to-accent-400 bg-clip-text text-transparent'>YousMedia</span>`
+                      )
+                      .pauseFor(1000)
+                      .deleteAll()
+                      .typeString(
+                        `${t('hero', 'title')} <span class='bg-gradient-to-r from-primary-400 via-secondary-400 to-accent-400 bg-clip-text text-transparent'>${
+                          t('hero', 'titleHighlight'
+                        )}</span> ${t('hero', 'titleEnd')}`
+                      )
+                      .start();
+                  }}
+                />
+              </h1>
           </div>
-
-          <p className="text-xl md:text-2xl text-gray-600 dark:text-gray-400 mb-12 max-w-3xl mx-auto leading-relaxed">
-            {t('heroSubtitle')}
-          </p>
-
-          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-            <Button 
-              size="lg" 
-              className="px-8 py-6 text-lg bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white border-0 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105"
-            >
-              {t('getStarted')}
-            </Button>
-            <Button 
-              size="lg" 
-              variant="outline" 
-              className="px-8 py-6 text-lg rounded-full border-2 border-purple-400 text-purple-600 dark:text-purple-400 hover:bg-purple-600 hover:text-white dark:hover:bg-purple-400 dark:hover:text-gray-900 transition-all duration-300 transform hover:scale-105"
-            >
-              <Play className="mr-2 h-5 w-5" />
-              {t('watchDemo')}
-            </Button>
           </div>
         </div>
       </div>
-
-      <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
-        <div className="w-6 h-10 border-2 border-purple-400 rounded-full flex justify-center">
-          <div className="w-1 h-3 bg-purple-400 rounded-full mt-2 animate-pulse"></div>
+      <div className="absolute bottom-8 transform -translate-x-1/2 animate-bounce">
+        <div className="w-6 h-10 border-2 border-white/30 rounded-full flex justify-center">
+          <div className="w-1 h-3 bg-white rounded-full mt-2 animate-pulse"></div>
         </div>
       </div>
     </section>
